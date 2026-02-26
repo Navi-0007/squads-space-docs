@@ -9,8 +9,8 @@
   },
   "favicon": "/favicon.svg",
   "logo": {
-    "dark": "/logo/squadsspace-dark.svg",
-    "light": "/logo/squadsspace-light.svg",
+    "dark": "https://squad-space.s3.ap-south-1.amazonaws.com/branding/logos/main/ss-b_wordmark.png",
+    "light": "https://squad-space.s3.ap-south-1.amazonaws.com/branding/logos/main/ss-w_logo_only.png",
     "href": "https://www.squads-space.com"
   },
   "appearance": {

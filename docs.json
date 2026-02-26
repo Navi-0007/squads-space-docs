@@ -13,7 +13,9 @@
     "light": "/logo/squadsspace-light.svg",
     "href": "https://www.squads-space.com"
   },
-  "appearance": "dark",
+  "appearance": {
+  "default": "dark"
+  },
   "navbar": {
     "links": [
       {

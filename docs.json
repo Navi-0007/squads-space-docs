@@ -7,10 +7,10 @@
     "light": "#60A5FA",
     "dark": "#3B82F6"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "favicon/favicon-32x32.png",
   "logo": {
-    "light": "https://squad-space.s3.ap-south-1.amazonaws.com/branding/logos/main/ss-b_wordmark.png",
-    "dark": "https://squad-space.s3.ap-south-1.amazonaws.com/branding/logos/main/ss-w_logo_only.png",
+    "light": "logo/ss-b_logo_only.png",
+    "dark": "logo/ss-w_logo_only.png",
     "href": "https://www.squads-space.com"
   },
   "appearance": {

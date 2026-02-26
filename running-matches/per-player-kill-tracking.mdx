@@ -1,0 +1,68 @@
+---
+title: "Per-Player Kill Tracking"
+description: "Track individual kills per player using Free Fire UIDs."
+---
+
+When UID/IGN verification is enabled on a tournament, you can track individual kills per player — not just team totals.
+
+## Prerequisites
+
+- UID/IGN verification must be enabled on the tournament
+- Players must have provided their Free Fire UID and IGN during registration
+
+## How It Works
+
+When entering match results for a team, instead of just entering the team's total kills, you expand the team card to see all registered players:
+
+1. Open the match in your dashboard
+2. Click on a team to expand their player list
+3. Enter kills for each individual player
+4. The platform calculates:
+   - **Individual kill points** per player (kills × kill point value)
+   - **Team total kills** (sum of all player kills)
+   - **Team kill points** (team total × kill point value)
+   - **Placement points** (based on team placement)
+   - **Team total points** (kill points + placement points)
+
+## Example
+
+**Team: Phoenix Esports** — Placed 2nd
+
+| Player | Kills | Kill Pts |
+|--------|-------|----------|
+| FF_Phoenix (Captain) | 6 | 6 |
+| HeadHunter99 | 4 | 4 |
+| SniperX | 3 | 3 |
+| ClutchGod | 2 | 2 |
+| **Team Total** | **15** | **15** |
+
+Placement points (2nd place): 9
+**Team Total Points: 15 + 9 = 24**
+
+## Player Leaderboard
+
+With per-player tracking enabled, SquadsSpace generates a player leaderboard showing individual performance across the tournament:
+
+- Total kills per player
+- Total kill points per player
+- Matches played
+- Average kills per match
+
+This data is tied to verified UIDs, so there's no ambiguity about who performed.
+
+## When to Use It
+
+Per-player tracking adds a bit more work when entering scores (entering kills for each player instead of one team total), but it's worth it for:
+
+- **Competitive tournaments** where individual performance matters
+- **MVP awards** — easily identify the tournament's top fraggers
+- **Dispute resolution** — verified kill counts tied to UIDs
+- **Player scouting** — organizers and teams can spot talent
+
+For casual scrims, team-level kill entry is usually sufficient.
+
+## Related
+
+- [Entering Scores](/docs/running-matches/entering-scores)
+- [UID/IGN Verification](/docs/tournaments/uid-ign-verification)
+- [Point Tables](/docs/running-matches/point-tables)

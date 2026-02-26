@@ -1,0 +1,77 @@
+---
+title: "Roadmap Builder"
+description: "Build multi-stage tournaments with Elimination and Round Robin formats."
+---
+
+The Roadmap Builder is a visual tool where you define your tournament stages and connect them into a journey. Each stage can be Elimination or Round Robin, and different stages can use different formats.
+
+## Stage Types
+
+### Elimination
+
+Teams play in groups, and the top performers advance to the next stage.
+
+**How it works:**
+- Teams are divided into groups (e.g., 4 groups of 12)
+- Each group plays a set number of matches (up to 8)
+- Points are calculated per match and accumulated
+- Top teams from each group advance to the next stage (e.g., top 4 advance)
+
+**Best for:** Early stages where you need to narrow down a large number of teams quickly.
+
+**Example:** Open Qualifiers — 192 teams in 16 groups of 12. Each group plays 4 matches. Top 4 from each group advance to Semifinals.
+
+### Round Robin
+
+A cross-group format where groups play against each other. Points are calculated at multiple levels — per match, per pairing, per group, and per player.
+
+**How it works:**
+- Teams are split into groups
+- Groups are paired against each other in cross-group matches
+- Combined leaderboards across all pairings determine the final standings
+
+**Best for:** Final stages where you want the fairest possible evaluation across all remaining teams.
+
+**Example:** Grand Finals — 18 teams in 3 groups of 6. All 3 groups compete against each other across multiple matches. Combined leaderboard determines the champion.
+
+## Mixing Formats
+
+Different stages in the same tournament can use different formats. This is how major esports events like FFIC and FFWS operate.
+
+**Example tournament:**
+- **Stage 1: Open Qualifiers** — Elimination, 4 groups of 12 teams, top 4-5 advance
+- **Stage 2: Grand Finals** — Round Robin, 3 groups of 6 teams, cross-group competition
+
+Each stage is independent — set the format, matches per group, and advancement rules for each.
+
+## Building Your Roadmap
+
+1. **Add a stage** — give it a name (e.g., "Open Qualifiers", "Semifinals", "Grand Finals")
+2. **Choose format** — Elimination or Round Robin
+3. **Set group size** — how many teams per group (e.g., 12)
+4. **Set matches per group** — up to 8 matches
+5. **Set advancement** — how many teams advance to the next stage (for Elimination stages)
+6. Repeat for additional stages
+
+The platform automatically calculates how many groups you need based on total teams and group size.
+
+## Advancement Rules
+
+For Elimination stages, you set how many teams advance from each group. The platform handles the math:
+
+- 16 groups × top 4 from each = 64 teams advance
+- Those 64 feed into the next stage's groups automatically
+
+> **Tip:** Make sure your advancement numbers add up cleanly. If the next stage has groups of 6, and you have 3 groups, you need exactly 18 teams advancing from the previous stage.
+
+## Downloading Your Roadmap
+
+Once your roadmap is built, you can download it as an image. Share this in your WhatsApp groups and Discord server so players can see the full tournament journey — from registration to finals.
+
+[Screenshot: Roadmap download button]
+
+## Related
+
+- [Creating a Tournament](/docs/tournaments/creating-a-tournament)
+- [Group Creation](/docs/tournaments/group-creation)
+- [Invited Slots](/docs/tournaments/invited-slots)

@@ -7,7 +7,7 @@
     "light": "#60A5FA",
     "dark": "#3B82F6"
   },
-  "favicon": "favicon/favicon-32x32.png",
+  "favicon": "/favicon/favicon-32x32.png",
   "logo": {
     "light": "logo/ss-b_logo_only.png",
     "dark": "logo/ss-w_logo_only.png",

@@ -3,9 +3,9 @@
   "theme": "aspen",
   "name": "SquadsSpace",
   "logo": {
-    "dark": "/logo/ss-b_logo_only.png",
-    "light": "/logo/ss-w_logo_only.png"
-  },
+    "dark": "/logo/ss-w_wordmark.png",
+    "light": "/logo/ss-b_wordmark.png"
+  }, 
   "favicon": "/favicon.svg",
   "colors": {
     "primary": "#3B82F6",

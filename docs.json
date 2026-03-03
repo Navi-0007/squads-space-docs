@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
+  "theme": "aspen",
   "name": "SquadsSpace",
   "logo": {
     "dark": "/logo/ss-b_logo_only.png",
@@ -119,7 +119,6 @@
     ]
   },
   "footerSocials": {
-    "discord": "https://discord.gg/squadsspace",
-    "instagram": "https://instagram.com/squadsspace"
+    "discord": "https://discord.com/invite/XjQf9nXQ6S"
   }
 }

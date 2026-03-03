@@ -3,8 +3,8 @@
   "theme": "mint",
   "name": "SquadsSpace",
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "dark": "/logo/ss-b_logo_only.png",
+    "light": "/logo/ss-w_logo_only.png"
   },
   "favicon": "/favicon.svg",
   "colors": {

@@ -4,7 +4,7 @@
   "name": "SquadsSpace",
   "logo": {
     "dark": "/logo/ss-w_logo_only.png",
-    "light": "/logo/ss-b_logo_only.png"
+    "light": "/logo/ss-w_logo_only.png"
   },
   "favicon": "/favicon.svg",
   "colors": {
@@ -120,5 +120,20 @@
   },
   "footerSocials": {
     "discord": "https://discord.com/invite/XjQf9nXQ6S"
+  },
+  "seo": {
+    "indexing": "all"
+  },
+  "navbar": {
+    "links": []
+  },
+  "footer": {
+    "socials": {
+      "discord": "https://discord.com/invite/XjQf9nXQ6S",
+      "website": "https://squads-space.com"
+    }
+  },
+  "metadata": {
+    "timestamp": true
   }
 }

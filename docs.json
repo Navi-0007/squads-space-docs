@@ -1,98 +1,124 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "sequoia",
-  "name": "SquadsSpace Docs",
+  "name": "SquadsSpace",
+  "logo": {
+    "dark": "/logo/dark.svg",
+    "light": "/logo/light.svg"
+  },
+  "favicon": "/favicon.svg",
   "colors": {
     "primary": "#3B82F6",
     "light": "#60A5FA",
-    "dark": "#3B82F6"
-  },
-  "favicon": "/favicon/favicon-32x32.png",
-  "logo": {
-    "light": "logo/ss-b_logo_only.png",
-    "dark": "logo/ss-w_logo_only.png",
-    "href": "https://www.squads-space.com"
-  },
-  "appearance": {
-  "default": "dark"
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "Discord",
-        "href": "https://discord.gg/yzgQNmStz"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Get Started",
-      "href": "https://www.squads-space.com/founding-clubs"
-    }
-  },
-  "footer": {
-    "socials": {
-      "discord": "https://discord.gg/yzgQNmStz",
-      "website": "https://www.squads-space.com"
-    }
+    "dark": "#2563EB"
   },
   "navigation": {
-    "groups": [
+    "tabs": [
       {
-        "group": "Getting Started",
-        "pages": [
-          "getting-started/welcome",
-          "getting-started/quick-start",
-          "getting-started/scrims-vs-tournaments"
+        "tab": "Getting Started",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "getting-started/welcome",
+              "getting-started/signing-up",
+              "getting-started/quick-start-player",
+              "getting-started/quick-start",
+              "getting-started/becoming-an-organizer",
+              "getting-started/scrims-vs-tournaments"
+            ]
+          }
         ]
       },
       {
-        "group": "Tournaments",
-        "pages": [
-          "tournaments/creating-a-tournament",
-          "tournaments/roadmap-builder",
-          "tournaments/registration-modes",
-          "tournaments/invited-slots",
-          "tournaments/group-creation",
-          "tournaments/uid-ign-verification"
+        "tab": "Players",
+        "groups": [
+          {
+            "group": "Player Guide",
+            "pages": [
+              "players/player-dashboard",
+              "players/browsing-tournaments",
+              "players/registering-for-tournaments",
+              "players/registration-status",
+              "players/match-hub",
+              "players/squads",
+              "players/clubs",
+              "players/profile-and-settings",
+              "players/notifications"
+            ]
+          }
         ]
       },
       {
-        "group": "Running Matches",
-        "pages": [
-          "running-matches/entering-scores",
-          "running-matches/per-player-kill-tracking",
-          "running-matches/point-tables",
-          "running-matches/auto-slot-lists"
-        ]
-      },
-      {
-        "group": "Live Streaming",
-        "pages": [
-          "live-streaming/stream-overlays",
-          "live-streaming/live-scoring"
-        ]
-      },
-      {
-        "group": "Scrims",
-        "pages": [
-          "scrims/creating-a-scrim",
-          "scrims/scrim-leaderboards"
-        ]
-      },
-      {
-        "group": "Managing Players",
-        "pages": [
-          "managing-players/reviewing-registrations",
-          "managing-players/communication-links"
-        ]
-      },
-      {
-        "group": "Founding Clubs",
-        "pages": [
-          "founding-clubs/founding-club-benefits",
-          "founding-clubs/getting-setup"
+        "tab": "Organizers",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "organizer/organizer-dashboard"
+            ]
+          },
+          {
+            "group": "Tournaments",
+            "pages": [
+              "organizer/tournaments/creating-a-tournament",
+              "organizer/tournaments/editing-a-tournament",
+              "organizer/tournaments/tournament-dashboard",
+              "organizer/tournaments/roadmap-builder",
+              "organizer/tournaments/registration-modes",
+              "organizer/tournaments/requirements",
+              "organizer/tournaments/group-creation",
+              "organizer/tournaments/invited-slots",
+              "organizer/tournaments/uid-ign-verification",
+              "organizer/tournaments/exporting-data"
+            ]
+          },
+          {
+            "group": "Scrims",
+            "pages": [
+              "organizer/scrims/creating-a-scrim"
+            ]
+          },
+          {
+            "group": "Running Matches",
+            "pages": [
+              "organizer/running-matches/managing-matches",
+              "organizer/running-matches/announcements",
+              "organizer/running-matches/mass-operations",
+              "organizer/running-matches/point-tables",
+              "organizer/running-matches/completing-a-stage",
+              "organizer/running-matches/stage-summary",
+              "organizer/running-matches/stage-settings",
+              "organizer/running-matches/status-control"
+            ]
+          },
+          {
+            "group": "Live Streaming",
+            "pages": [
+              "organizer/live-streaming/stream-overlays",
+              "organizer/live-streaming/live-scoring",
+              "organizer/live-streaming/standalone-live-scoring"
+            ]
+          },
+          {
+            "group": "Managing Players",
+            "pages": [
+              "organizer/managing-players/reviewing-registrations"
+            ]
+          },
+          {
+            "group": "Your Club",
+            "pages": [
+              "organizer/founding-clubs/founding-a-club",
+              "organizer/founding-clubs/club-settings",
+              "organizer/founding-clubs/club-members"
+            ]
+          }
         ]
       }
     ]
+  },
+  "footerSocials": {
+    "discord": "https://discord.gg/squadsspace",
+    "instagram": "https://instagram.com/squadsspace"
   }
 }

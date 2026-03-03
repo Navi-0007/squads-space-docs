@@ -1,0 +1,78 @@
+---
+title: "Status Control"
+description: "Manage tournament and match lifecycle states."
+---
+
+Every tournament and match moves through a series of statuses. Status Control lets you manually trigger transitions when you need to override automatic timing or handle unexpected situations.
+
+## Tournament Statuses
+
+Tournaments progress through these states:
+
+**Draft** → **Published** → **Registration Open** → **Registration Closed** → **In Progress** → **Completed**
+
+At any point before completion, a tournament can be **Paused** or **Cancelled**.
+
+### Available Transitions
+
+From **Draft**:
+- Publish Tournament — makes it visible in public listings. Registration will open automatically at the scheduled time.
+- Cancel Tournament — permanently cancel before publishing.
+
+From **Published**:
+- Start Registration — opens registration immediately, overriding the scheduled open time.
+- Pause Tournament — temporarily suspend, hide from public view.
+- Cancel Tournament — permanently cancel.
+
+From **Registration Open**:
+- Close Registration — stop accepting new registrations. Overrides scheduled close time if set.
+- Start Tournament — skip registration close and begin competition immediately.
+- Pause Tournament — suspend during registration. Existing registrations are preserved.
+- Cancel Tournament — cancel with active registrations.
+
+From **Registration Closed**:
+- Reopen Registration — re-open to allow more teams. Requires setting a new close time and start time.
+- Start Tournament — begin competition immediately.
+- Pause Tournament — suspend before competition starts.
+- Cancel Tournament — cancel before competition begins.
+
+From **In Progress**:
+- Complete Tournament — finalize all results and rankings.
+- Pause Tournament — suspend active competition. Matches are frozen.
+- Cancel Tournament — cancel mid-competition.
+
+From **Paused**:
+- Resume — return to the state the tournament was in before pausing. May require setting new schedule times depending on which state you're resuming to.
+
+**Completed** and **Cancelled** are terminal states — no further transitions are possible.
+
+### Risk Levels
+
+Each transition is labeled with a risk level:
+- **Low risk** — safe actions like publishing or completing
+- **Medium risk** — actions that override schedules or affect registrations
+- **High risk** — irreversible actions like cancelling or starting competition early
+
+High-risk transitions require typing a confirmation word before proceeding.
+
+## Match Statuses
+
+Matches have their own lifecycle:
+
+**Not Scheduled** → **Scheduled** → **In Progress** (shown as "Live") → **Completed**
+
+A match can also be **Cancelled** at any point.
+
+From the group or pairing page, you can access Match Status Control for any match to manually transition it. This is useful for starting a match early, marking it complete after entering scores, or cancelling a match that won't happen.
+
+Scheduled and In Progress matches block stage completion — they must be either completed or cancelled before you can complete the stage.
+
+## Accessing Status Control
+
+For tournaments: from the tournament dashboard, go to Status Control. For matches: from the group page, select a match and open its status page.
+
+## Related
+
+- [Completing a Stage](/organizer/running-matches/completing-a-stage)
+- [Creating a Tournament](/organizer/tournaments/creating-a-tournament)
+- [Managing Matches](/organizer/running-matches/managing-matches)

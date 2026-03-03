@@ -1,0 +1,76 @@
+---
+title: "Roadmap Builder"
+description: "Build multi-stage tournaments with Elimination and Round Robin formats."
+---
+
+The Roadmap Builder is where you define your tournament's stages and how teams progress through them. Once created, the roadmap is locked — so plan your structure before building it.
+
+## Building Your Roadmap
+
+From your tournament's manage page, open the Roadmap Builder. For each stage you add:
+
+1. **Stage name** — e.g., "Open Qualifiers", "Semifinals", "Grand Finals"
+2. **Stage type** — Elimination or Round Robin
+3. **Slots** — how many teams in this stage
+4. **Advancement** — how many teams advance to the next stage (for Elimination)
+5. **Invited slots** — whether this stage has directly invited teams
+
+The system calculates everything automatically — group counts, how many need to advance from prior stages to fill remaining slots, etc.
+
+## Stage Types
+
+### Elimination
+
+Teams are divided into groups, and matches happen within each group. Top performers advance to the next stage.
+
+- Each group contains teams based on the game mode (e.g., 12 squads per group, since a custom room holds 12 squads)
+- Each group plays up to 8 matches
+- Points accumulate across matches within the group
+- Top teams from each group advance to the next stage
+
+**Best for:** Early stages where you need to narrow down a large number of teams quickly.
+
+**Example:** Open Qualifiers — 192 squads in 16 groups of 12. Each group plays 4 matches in their own custom rooms. Top 4 from each group advance to Semifinals.
+
+### Round Robin
+
+Teams are split into groups, but unlike Elimination, matches happen in pairings — not within individual groups. Each group plays every other group once.
+
+- Groups are created first (e.g., 3 groups of 6 squads)
+- Pairings are configured after the roadmap is created, from the stage's manage page
+- The system auto-generates pairings based on your configuration (group names, seeding strategy, etc.)
+- A pairing is where two groups face each other — that's where the actual matches take place
+- Combined leaderboard across all pairings determines final standings
+
+**Best for:** Final stages where you want the fairest possible evaluation across all remaining teams.
+
+**Example:** Grand Finals — 18 squads in 3 groups of 6. Group A vs Group B, Group A vs Group C, Group B vs Group C — 3 pairings total. Combined leaderboard across all pairings determines the champion.
+
+## Mixing Formats
+
+Different stages in the same tournament can use different formats. This is how major events like FFIC and FFWS operate.
+
+**Example tournament:**
+- **Stage 1: Open Qualifiers** — Elimination, 192 squads in 16 groups of 12, top 4 advance
+- **Stage 2: Semifinals** — Elimination, 64 squads in 8 groups of 8, top 3 advance
+- **Stage 3: Grand Finals** — Round Robin, 24 squads in 4 groups of 6, pairings determine the champion
+
+## After the Roadmap Is Created
+
+Once your roadmap is set, it's locked. You'll see all your stages on the manage tournament page. From each stage you can:
+
+- Configure groups
+- Configure pairings (Round Robin stages only)
+- Manage matches — both group pages (Elimination) and pairing pages (Round Robin) share the same layout: Schedule, ID/Password, Results, and Announcements
+
+## Downloading Your Roadmap
+
+You can download your roadmap as a shareable image using one of the free demo templates, or as a PDF. Share it in your WhatsApp and Discord groups so players can see the full tournament journey.
+
+More templates coming soon.
+
+## Related
+
+- [Creating a Tournament](/organizer/tournaments/creating-a-tournament)
+- [Group Creation](/organizer/tournaments/group-creation)
+- [Invited Slots](/organizer/tournaments/invited-slots)

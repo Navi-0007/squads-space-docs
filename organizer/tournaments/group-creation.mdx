@@ -1,0 +1,80 @@
+---
+title: "Automatic Group Creation"
+description: "Configure naming, seeding, fill strategies, and auto-assign for tournament groups."
+---
+
+SquadsSpace generates groups automatically based on your configuration. You set the rules — the platform builds the groups and assigns teams.
+
+## How It Works
+
+From your stage's manage page, go to Auto Groups. You'll configure four settings before generating:
+
+## 1. Group Naming
+
+Choose how your groups are named:
+
+- **Auto-generate** — set a prefix (e.g., "Group") and a pattern (letters: A, B, C or numbers: 1, 2, 3). Result: "Group A", "Group B", etc.
+- **Custom names** — name each group manually. Useful when you want names like "Warriors Pool", "Legends Pool", etc.
+
+## 2. Invited Slots Handling
+
+If your stage has invited slots, choose how invited teams are distributed across groups:
+
+- **Balanced** — distribute invited squads evenly across all groups to avoid stacking advantages.
+- **Stacked** — concentrate invited squads into as few early groups as possible. Requires enough invited slots to fill at least one full group.
+- **Frontload** — seed invited squads into the earliest groups first before using later groups.
+
+If the stage has no invited slots, this setting is ignored.
+
+## 3. Seeding Strategy
+
+How registered teams are distributed across groups:
+
+- **Balanced random** — shuffle entrants while keeping group sizes even. This is the default and works for most events.
+- **Rank-based** — distribute teams by skill tiers. Coming soon once player and audience levels are introduced.
+
+## 4. Fill Strategy
+
+How remaining slots are filled after invited teams are placed:
+
+- **Balanced** — distribute participants evenly so every group stays roughly the same size.
+- **Sequential** — fill each group to capacity before moving on to the next one.
+
+## Generating Groups
+
+Once your settings are configured, click Generate. The platform creates all groups, names them, and assigns teams based on your strategies.
+
+## After Groups Are Generated
+
+Once groups exist, you can:
+
+- **View all groups** and their team assignments
+- **Shuffle registrations** — move teams between groups manually if you want to adjust the auto-generated assignments
+- **Manage invited slots** — if your stage has invited slots, there's a separate Invited Slots page where you manage the invite link, track who's joined, and see capacity. See [Invited Slots](/organizer/tournaments/invited-slots) for details.
+
+Take your time here — once you're happy with the group assignments, the next step is locking.
+
+## Auto-Assign
+
+Auto-assign is an optional feature you can enable during group configuration. When turned on, the system automatically places new registrations into groups every 15 minutes in the background, using your selected fill and seeding strategies.
+
+This is useful for large tournaments where registrations come in over days or weeks — groups stay balanced without you manually assigning anyone. You can see when auto-assign last ran from the settings page.
+
+You can still manually shuffle teams even with auto-assign enabled.
+
+## Locking Groups
+
+Before you can create matches, you must lock the groups. Locking means:
+
+- No more shuffling or rearranging registrations between groups
+- No more new assignments (auto-assign stops)
+- Group composition is finalized
+- You can now create matches for each group
+
+This is a deliberate step — it ensures you've reviewed and approved the group assignments before matches begin. Make sure invited slots are filled and registrations are where you want them before locking.
+
+## Related
+
+- [Invited Slots](/organizer/tournaments/invited-slots)
+- [Roadmap Builder](/organizer/tournaments/roadmap-builder)
+- [Managing Matches](/organizer/running-matches/managing-matches)

@@ -1,64 +1,88 @@
 ---
-title: "Quick Start Guide"
-description: "Create your first tournament in 5 minutes — step by step."
+title: "Quick Start — Organizers"
+description: "Set up your first tournament or scrim from start to finish."
 ---
 
-Get your first tournament running in under 5 minutes. This guide walks you through the basics — from creating a tournament to entering your first match scores.
+This guide walks you through creating and running your first event on SquadsSpace.
 
 ## Step 1: Create Your Account
 
-Sign up at [squadsspace.com](https://squadsspace.com) with your email. You'll be asked to create your club — this is your organizer profile that players will see.
+Head to [platform.squads-space.com](https://platform.squads-space.com/auth) and sign up with your email and password. Everyone starts as a player.
 
-> **Tip:** Use your actual club or community name. This is how players will find and recognize you.
+## Step 2: Convert to Organizer
 
-## Step 2: Create a Tournament or Scrim
+Go to [/organizer/register](https://platform.squads-space.com/organizer/register) and fill in your details — your name, club name, etc. Once submitted, you'll have access to both your Player Dashboard and Organizer Dashboard.
 
-From your dashboard, click **Create New**.
+## Step 3: Create a Tournament or Scrim
 
-You'll choose between two types:
+From the Organizer Dashboard sidebar, go to Tournaments and click Create.
 
-- **Tournament** — Multi-stage event with a roadmap. Use this for qualifiers → semifinals → finals formats.
-- **Scrim** — Single group, multiple matches. Use this for daily/weekly practice lobbies.
+You'll walk through a creation flow:
 
-Not sure which to pick? See [Scrims vs Tournaments](/docs/getting-started/scrims-vs-tournaments).
+1. **Name, description, and poster** — give your event an identity
+2. **Visibility and registration mode** — Public (Open or Approval Required) or Private (Invite Only or Invite Only with Approval)
+3. **Game mode** — Solo, Duo, or Squad
+4. **Slots** — how many teams can register
+5. **Schedule** — registration start, registration close, tournament start, tournament close (optional)
+6. **Requirements** — toggle what players need to meet:
+   - Registering user must join club
+   - Require full roster
+   - Require all members in club (auto-enables the first two)
+   - Require UID/IGN (auto-enables full roster)
+7. **Communication links** — your WhatsApp group and Discord server
+8. **Point table** — set kill points and placement points per position
 
-## Step 3: Configure Your Settings
+Not sure whether to create a Scrim or Tournament? See [Scrims vs Tournaments](/getting-started/scrims-vs-tournaments).
 
-For either type, you'll set:
+## Step 4: Build Your Roadmap (Tournaments Only)
 
-- **Game mode:** Solo, Duo, or Squad
-- **Point table:** Set your custom kill points and placement points (e.g., 1 kill = 1 point, 1st place = 12 points)
-- **Registration mode:** Open, Approval Required, Invite Only, or Invite with Approval
-- **UID/IGN verification:** Toggle on if you want players to provide their Free Fire UID and In-Game Name
+After creating a tournament, build your roadmap. Define each stage — how many slots, how many teams advance, whether there are invited slots, and whether it's Elimination or Round Robin. The system calculates everything automatically.
 
-> **Tip:** For casual scrims, keep it simple — Open registration, no UID verification. For competitive tournaments, enable Approval Required + UID verification.
+Once your roadmap is set, it's locked. You can download it as a shareable image using one of the free demo templates, or as a PDF — share it in your WhatsApp and Discord groups so players can see the full journey.
 
-## Step 4: Share the Registration Link
+Scrims don't have roadmaps — they're single-group events.
 
-Once your tournament is created, you get a registration link. Share it in your WhatsApp groups and Discord server. Players click the link, fill in their team details, and you see entries appear in your dashboard.
+## Step 5: Share and Collect Registrations
 
-You can also add your WhatsApp group link and Discord server invite directly to the tournament page so players know where your community lives.
+Publish your tournament. Players can find it by browsing the platform or through a direct link you share.
 
-## Step 5: Enter Match Scores
+For private events, share the secure invite link. You can regenerate it anytime if it gets leaked.
 
-After a match finishes:
+If you chose Approval Required, review incoming registrations from your dashboard — approve or reject each one.
 
-1. Open the match in your dashboard
-2. Enter each team's **kill count** and select their **placement** (1st through 12th)
-3. The platform calculates total points instantly using your custom point table
-4. Results feed into the tournament leaderboard automatically
+## Step 6: Set Up Groups
 
-That's it. No formulas. No calculator. No copy-pasting between sheets.
+Once registrations are in, set up groups for each stage. Configure group size and how invited slots are distributed (spread across groups or in a dedicated group). Click Generate and the platform creates all groups and assigns teams.
 
-## Step 6: Share Results
+## Step 7: Schedule Matches and Share Room Credentials
 
-Your leaderboard updates automatically. Players can check their standings on the platform. Share the link in your groups — done.
+Set the schedule for each match. Enter the room ID and password — players will see it directly on the platform without needing to check WhatsApp or Discord.
 
-If you're streaming, grab your [Stream Overlay URL](/docs/live-streaming/stream-overlays) and add it to OBS for live-updating scoreboards.
+## Step 8: Enter Scores
+
+After each match:
+
+1. Open the match from your dashboard
+2. Enter each team's kills and placement in the score table
+3. If UID/IGN is enabled, you can enter per-player kills
+4. Click Save
+
+Points are calculated automatically using your point table. The leaderboard updates instantly.
+
+## Step 9: Share Results
+
+Your leaderboard updates in real-time. Share the link in your groups — players can check standings anytime.
+
+If you're streaming, grab your overlay URL and add it as a browser source in OBS. SquadsSpace has two overlay types:
+
+- **In-match overlay** — use while the match is live
+- **Full-screen overlay (16:9)** — use after match completion or however you like
+
+Both update in real-time as you enter scores.
 
 ## What's Next?
 
-- [Setting up a full tournament with multiple stages](/docs/tournaments/roadmap-builder)
-- [Understanding registration modes](/docs/tournaments/registration-modes)
-- [Using stream overlays](/docs/live-streaming/stream-overlays)
-- [Running scrims](/docs/scrims/creating-a-scrim)
+- Learn about the [Roadmap Builder](/organizer/tournaments/roadmap-builder)
+- Understand [Registration Modes](/organizer/tournaments/registration-modes) in detail
+- Set up [Stream Overlays](/organizer/live-streaming/stream-overlays)
+- Run your first [Scrim](/organizer/scrims/creating-a-scrim)

@@ -7,7 +7,7 @@ When creating a tournament or scrim, you can toggle up to four requirements that
 
 ## The 4 Requirements
 
-### 1. Registering User Must Join Club
+### 1. Require Club Membership
 
 The player submitting the registration must be a member of your club. If they're not already a member, they'll be prompted to join your club during the registration process. This only applies to the player who is registering the team — not all team members.
 
@@ -23,38 +23,45 @@ The registration won't be considered complete until the roster meets this requir
 
 ### 3. Require All Members in Club
 
-Every team member must be registered on the platform AND be a member of your club. This automatically enables the first two requirements (registering user must join club + full roster).
+Every team member must be registered on the platform AND be a member of your club. This automatically enables the first two requirements (club membership + full roster).
 
-The registering player is prompted to join the club at the time of registration. Other team members will see a sticky banner on the status page telling them to join the club, along with details on which members still need to join.
+The registering player is prompted to join the club at the time of registration. Other team members will see a banner on the status page telling them to join the club, along with details on which members still need to join.
 
-### 4. Require UID/IGN
+### 4. Require Game UID & IGN
 
-Players must provide their Free Fire User ID and In-Game Name for this tournament. This automatically enables the full roster requirement.
+Players must provide their Free Fire User ID and In-Game Name for this tournament.
 
-This is set per tournament — players enter their UID and IGN during the registration process for each event.
+This is set per tournament — players enter their UID and IGN for each event. This requirement is **independent** — you can enable it with or without requiring a full roster.
+
+**How UIDs get submitted depends on your setup:**
+
+- **With full roster enabled:** Each team member provides their own UID and IGN individually from the Registration Status page.
+- **Without full roster:** The person who registered the team submits UIDs and IGNs for all members together.
+
+> **Tip:** Enable UID/IGN for any tournament where you want per-player kill tracking or plan to use Smart Results. It lets the system match scores to individual players automatically.
 
 ## How Requirements Work Together
 
-Some requirements auto-enable others:
+Only one requirement auto-enables others:
 
-- **Require all members in club** → auto-enables Registering user must join club + Require full roster
-- **Require UID/IGN** → auto-enables Require full roster
+- **Require All Members in Club** → auto-enables Require Club Membership + Require Full Roster
+- **Require Game UID & IGN** → does NOT auto-enable anything. It works independently.
 
 ## What Players See
 
 Players see all requirements listed on the registration page before they register. After registering, the status page shows:
 
 - Their registration status
-- Any pending requirements — which members still need to join the club, missing roster spots, etc.
-- A sticky banner at the top if action is needed
+- A progress tracker for each requirement — which are complete, which still need action
+- A banner at the top if action is needed (e.g., "Join club" or "Provide UID")
 
 ## When to Use What
 
 | Scenario | Recommended Requirements |
 |----------|------------------------|
 | Casual weekly scrim | None — keep it frictionless |
-| Community tournament | Registering user must join club |
-| Competitive tournament | Require full roster + Require UID/IGN |
+| Community tournament | Require Club Membership |
+| Competitive tournament | Require Full Roster + Require Game UID & IGN |
 | Serious invitational | All four — full control |
 
 ## Related

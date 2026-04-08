@@ -1,0 +1,109 @@
+---
+title: "How to Use Mass Operations"
+description: "Create, schedule, and manage matches across all groups at once for large tournaments."
+---
+
+import Screenshot from '/snippets/screenshot.mdx'
+import { ss_mass_create_scheduling, ss_mass_create_maps, ss_mass_manager, ss_mass_resultor } from '/snippets/screenshots.mdx'
+
+Mass Operations saves hours when managing large stages with 8, 12, or 16+ groups. Instead of navigating to each group individually, do everything from one page.
+
+## When to Use Mass Ops
+
+| Groups in stage | Recommendation |
+|----------------|----------------|
+| 1-3 groups | Manage individually from group pages |
+| 4-8 groups | Mass Ops recommended |
+| 8+ groups | Mass Ops essential |
+
+## Creating Matches in Bulk
+
+### Step 1: Select Groups
+
+From your stage's Mass Operations page, go to **Create Matches**. Select which groups (or pairings for Round Robin) you want to create matches for — all of them or specific ones.
+
+### Step 2: Set Match Counts
+
+Choose how many matches for each selected group. You can set the same count for all or customize per group.
+
+> **Tip:** Most Indian Free Fire tournament qualifiers run 4-6 matches per group. Finals often run 6-8 matches.
+
+### Step 3: Choose a Scheduling Strategy
+
+<Screenshot src={ss_mass_create_scheduling} alt="Scheduling options" caption="Choose how match times are distributed across groups" />
+
+Pick how match times are generated:
+
+**Parallel by Group/Pairing** — Each group runs its own timeline. Group A starts at 6:00 PM, Group B starts at 6:00 PM — all groups play simultaneously in separate custom rooms.
+
+> Use when: Groups play in parallel with separate room hosts.
+
+**Global Sequential** — One continuous timeline across all groups. Match 1 of Group A at 6:00 PM, Match 1 of Group B at 6:20 PM, Match 1 of Group C at 6:40 PM — every match has a unique time slot.
+
+> Use when: You're streaming all matches through one channel sequentially.
+
+**Same Time** — All matches start at exactly the same time. Every group's Match 1 starts at 6:00 PM.
+
+> Use when: All groups start simultaneously and finish around the same time.
+
+**Create Without Schedule** — Create matches now, schedule them later from Mass Manager.
+
+> Use when: You want to set up matches but haven't finalized the schedule yet.
+
+For sequential options, choose an interval: **20**, **30**, **45**, or **60 minutes** between matches (or enter a custom interval).
+
+### Step 4: Choose Maps
+
+<Screenshot src={ss_mass_create_maps} alt="Map selection" caption="Set maps per match — same for all or custom per group" />
+
+- **Same for all** — one map for every match across all groups
+- **Custom per Group/Pairing** — different maps for each match in each group
+
+> **Tip:** For qualifier stages, "Same for all" is fastest. For finals where map variety matters, use "Custom per Group" to set specific maps per match.
+
+## Mass Manager
+
+After matches are created, **Mass Manager** lets you bulk-edit details across all groups:
+
+<Screenshot src={ss_mass_manager} alt="Mass Manager interface" caption="Edit schedules, maps, and room credentials across all groups" />
+
+- Update match times across groups
+- Set or change maps
+- Enter room IDs and passwords for multiple groups at once
+
+This is where you go to schedule matches you created with "Create Without Schedule".
+
+> **Tip:** Enter all room IDs and passwords in Mass Manager the night before your tournament. On match day, just start matches — players already have their credentials.
+
+## Mass Resultor
+
+Enter scores for matches across all groups from one page:
+
+<Screenshot src={ss_mass_resultor} alt="Mass Resultor interface" caption="Enter results group by group without leaving the page" />
+
+1. Select a group and match
+2. Enter placements and kills
+3. Save and move to the next group/match
+
+No navigating back and forth between group pages.
+
+> **Tip:** After a round of matches finishes, open Mass Resultor and enter all results group by group. This is much faster than opening each group page individually.
+
+## Example: Running a 16-Group Qualifier
+
+Here's a realistic workflow for a 192-team qualifier stage (16 groups of 12):
+
+1. **Create Matches** — select all 16 groups, 4 matches each, "Parallel by Group/Pairing" with 30-minute intervals starting at 6:00 PM
+2. **Set Maps** — "Same for all": Bermuda for Match 1-2, Kalahari for Match 3-4
+3. **Enter Room Credentials** — open Mass Manager, enter room IDs and passwords for all 16 groups
+4. **Start Matches** — from each group page (or let automatic timing handle it)
+5. **Enter Results** — open Mass Resultor after each round, enter scores for all 16 groups
+6. **Repeat** — until all 4 rounds are done
+
+Total time saved vs managing individually: significant when you multiply every action by 16 groups.
+
+## Related
+
+- [Managing Matches](/organizer/running-matches/managing-matches)
+- [Group Creation](/how-to/group-creation)
+- [Mass Operations Reference](/organizer/running-matches/mass-operations)

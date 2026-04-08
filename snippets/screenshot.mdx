@@ -1,0 +1,22 @@
+{/*
+  REUSABLE SCREENSHOT COMPONENT
+  
+  Usage in any page:
+  
+  import Screenshot from '/snippets/screenshot.mdx'
+  import { ss_my_screenshot } from '/snippets/screenshots.mdx'
+  
+  <Screenshot src={ss_my_screenshot} alt="Description of screenshot" caption="What the user sees" />
+  
+  If src is empty (""), shows a placeholder message instead of a broken image.
+*/}
+
+{props.src ? (
+  <Frame caption={props.caption}>
+    <img src={props.src} alt={props.alt || props.caption} />
+  </Frame>
+) : (
+  <Info>
+    **Screenshot coming soon** — {props.caption || props.alt || "this section will include a screenshot"}
+  </Info>
+)}

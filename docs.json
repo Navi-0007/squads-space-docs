@@ -50,6 +50,27 @@
         ]
       },
       {
+        "tab": "How-To Guides",
+        "groups": [
+          {
+            "group": "For Organizers",
+            "pages": [
+              "how-to/roadmap-builder",
+              "how-to/registration-and-requirements",
+              "how-to/group-creation",
+              "how-to/mass-operations",
+              "how-to/live-scoring-and-overlays"
+            ]
+          },
+          {
+            "group": "For Players",
+            "pages": [
+              "how-to/match-day-player"
+            ]
+          }
+        ]
+      },
+      {
         "tab": "Organizers",
         "groups": [
           {

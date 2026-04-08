@@ -5,73 +5,85 @@ description: "Configure naming, seeding, fill strategies, and auto-assign for to
 
 SquadsSpace generates groups automatically based on your configuration. You set the rules — the platform builds the groups and assigns teams.
 
-## How It Works
+## How to Access
 
-From your stage's manage page, go to Auto Groups. You'll configure four settings before generating:
+From your stage's manage page, go to **Groups**. If no groups exist yet, click **Configure auto-create** to open the settings.
 
-## 1. Group Naming
+{/* TODO: screenshot — Auto-groups configuration */}
+
+## Configuration Options
+
+### 1. Group Naming
 
 Choose how your groups are named:
 
-- **Auto-generate** — set a prefix (e.g., "Group") and a pattern (letters: A, B, C or numbers: 1, 2, 3). Result: "Group A", "Group B", etc.
+- **Auto-generate names** — set a prefix (e.g., "Group") and a pattern (Letters A-Z or Numbers 1-9). Result: "Group A", "Group B", etc.
 - **Custom names** — name each group manually. Useful when you want names like "Warriors Pool", "Legends Pool", etc.
 
-## 2. Invited Slots Handling
+### 2. Invited Slots Handling
 
 If your stage has invited slots, choose how invited teams are distributed across groups:
 
-- **Balanced** — distribute invited squads evenly across all groups to avoid stacking advantages.
-- **Stacked** — concentrate invited squads into as few early groups as possible. Requires enough invited slots to fill at least one full group.
-- **Frontload** — seed invited squads into the earliest groups first before using later groups.
+- **Distribute evenly** — spread invited squads across all groups to avoid stacking advantages.
+- **Concentrate** — pack invited squads into as few early groups as possible. Requires enough invited slots to fill at least one full group.
+- **Seed into first groups** — place invited squads into the earliest groups first before filling later groups.
 
 If the stage has no invited slots, this setting is ignored.
 
-## 3. Seeding Strategy
+### 3. Seeding Strategy
 
 How registered teams are distributed across groups:
 
 - **Balanced random** — shuffle entrants while keeping group sizes even. This is the default and works for most events.
-- **Rank-based** — distribute teams by skill tiers. Coming soon once player and audience levels are introduced.
+- **Rank-based** — distribute teams by skill tiers (coming soon).
 
-## 4. Fill Strategy
+### 4. Fill Strategy
 
 How remaining slots are filled after invited teams are placed:
 
-- **Balanced** — distribute participants evenly so every group stays roughly the same size.
-- **Sequential** — fill each group to capacity before moving on to the next one.
+- **Balance across all groups** — distribute participants evenly so every group stays roughly the same size.
+- **Fill one group at a time** — fill each group to capacity before moving on to the next one.
 
-## Generating Groups
+## Creating Groups
 
-Once your settings are configured, click Generate. The platform creates all groups, names them, and assigns teams based on your strategies.
+Once your settings are configured:
 
-## After Groups Are Generated
+1. Click **Preview Groups** to see how teams would be distributed
+2. Review the preview — check group sizes and team assignments
+3. Click **Create Groups** to confirm and build the groups
+
+> **Tip:** Always preview before creating. The preview lets you catch any issues with group balance or invited slot distribution before committing.
+
+## After Groups Are Created
 
 Once groups exist, you can:
 
-- **View all groups** and their team assignments
-- **Shuffle registrations** — move teams between groups manually if you want to adjust the auto-generated assignments
-- **Manage invited slots** — if your stage has invited slots, there's a separate Invited Slots page where you manage the invite link, track who's joined, and see capacity. See [Invited Slots](/organizer/tournaments/invited-slots) for details.
-
-Take your time here — once you're happy with the group assignments, the next step is locking.
+- **View all groups** and their team assignments in expandable cards
+- **Move teams between groups** — select teams and use Multi Swap view to redistribute
+- **Manage invited slots** — if your stage has invited slots, there's a separate Invited Slots page. See [Invited Slots](/organizer/tournaments/invited-slots) for details.
 
 ## Auto-Assign
 
-Auto-assign is an optional feature you can enable during group configuration. When turned on, the system automatically places new registrations into groups every 15 minutes in the background, using your selected fill and seeding strategies.
+Auto-assign is an optional feature you can enable during group configuration. When turned on, the system automatically distributes new registrations into groups every 15 minutes, using your fill and seeding strategies.
 
 This is useful for large tournaments where registrations come in over days or weeks — groups stay balanced without you manually assigning anyone. You can see when auto-assign last ran from the settings page.
 
-You can still manually shuffle teams even with auto-assign enabled.
+You can still move teams between groups even with auto-assign enabled.
 
 ## Locking Groups
 
 Before you can create matches, you must lock the groups. Locking means:
 
-- No more shuffling or rearranging registrations between groups
-- No more new assignments (auto-assign stops)
+- No more moving or rearranging teams between groups
+- Auto-assign stops running
 - Group composition is finalized
 - You can now create matches for each group
 
-This is a deliberate step — it ensures you've reviewed and approved the group assignments before matches begin. Make sure invited slots are filled and registrations are where you want them before locking.
+To lock, use the lock controls on the Groups page. You'll see each group's lock status — a green indicator means locked, amber means unlocked.
+
+To make changes after locking, use the **Unlock Groups** button at the top of the page. Only groups whose matches haven't started can be unlocked.
+
+> **Tip:** Make sure invited slots are filled and teams are where you want them before locking. Review your groups one final time, then lock and move on to scheduling matches.
 
 ## Related
 

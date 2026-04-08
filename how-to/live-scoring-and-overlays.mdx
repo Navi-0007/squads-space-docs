@@ -1,0 +1,131 @@
+---
+title: "How to Set Up Live Scoring and Stream Overlays"
+description: "End-to-end guide to streaming your tournament with live-updating leaderboards in OBS."
+---
+
+import Screenshot from '/snippets/screenshot.mdx'
+import { ss_live_scoring_setup, ss_live_scoring_active, ss_live_scoring_push_scores, ss_overlay_urls_modal, ss_overlay_side_in_obs, ss_overlay_wide_in_obs, ss_overlay_broadcast_config, ss_overlay_template_gallery } from '/snippets/screenshots.mdx'
+
+This guide walks you through the complete streaming setup — from choosing your overlay templates to pushing scores live during a broadcast.
+
+## Before You Start
+
+You need:
+
+- A tournament or scrim with matches created and groups locked
+- OBS Studio (or any streaming software that supports browser sources)
+- Your point table configured (kill points + placement points)
+
+## Step 1: Configure Your Broadcast
+
+From your group or pairing page, go to **Live Scoring**. Before starting the session, set up your broadcast display:
+
+<Screenshot src={ss_overlay_broadcast_config} alt="Broadcast configuration" caption="Set your tournament name, stage, handles, and templates before going live" />
+
+| Field | What to enter | Example |
+|-------|--------------|---------|
+| **Tournament** | Name shown on overlay | "Phoenix Cup Season 3" |
+| **Stage** | Stage name shown on overlay | "Grand Finals" |
+| **Instagram Handle** | Your Instagram for branding | @phoenixesports |
+| **Discord Handle** | Your Discord for community | PhoenixCup |
+
+### Choose Your Templates
+
+Select separate templates for your two overlay styles:
+
+- **Side overlay template** — the compact leaderboard shown during gameplay
+- **Final overlay template** — the full-screen 16:9 results shown between matches
+
+<Screenshot src={ss_overlay_template_gallery} alt="Template gallery" caption="Browse and preview templates before selecting" />
+
+> **Tip:** Preview each template before selecting. Match the template style to your stream's visual identity — dark themes for nighttime streams, clean themes for professional broadcasts.
+
+## Step 2: Set Up OBS (Before Going Live)
+
+Open OBS and add your overlay browser sources **before** starting the live session:
+
+### Side Overlay (During Gameplay)
+
+1. In OBS, click **+** under Sources → **Browser**
+2. Name it "Side Standings"
+3. Leave the URL empty for now (you'll paste it after starting)
+4. Set width: **400**, height: **900** (adjust to your layout)
+5. Position it on the right side of your game feed
+
+### Full-Screen Overlay (Between Matches)
+
+1. Add another **Browser** source
+2. Name it "Full Results"
+3. Set width: **1920**, height: **1080**
+4. This will be toggled on between matches, off during gameplay
+
+> **Tip:** Create separate OBS scenes — "Gameplay" with the side overlay visible, and "Results" with the full-screen overlay visible. Switch scenes between matches for a professional broadcast flow.
+
+## Step 3: Start the Live Session
+
+1. Click **Start Live Scoring** on the setup page
+2. Confirm when prompted
+3. The **OBS Overlay URLs** modal appears with all your overlay links
+
+<Screenshot src={ss_overlay_urls_modal} alt="OBS Overlay URLs modal" caption="Copy overlay URLs and paste into your OBS browser sources" />
+
+Copy each URL and paste it into the corresponding OBS browser source:
+
+- **Overall Standings** → paste into your "Side Standings" browser source
+- **Final Results** → paste into your "Full Results" browser source
+- **Match overlays** → optional, for per-match results if you want them
+
+## Step 4: Score Matches Live
+
+During each match:
+
+1. Select the match from the tabs at the top
+2. Enter placement and kills for each team as results come in
+3. Click **Push Scores** — the overlay updates instantly for your viewers
+
+<Screenshot src={ss_live_scoring_active} alt="Live scoring interface" caption="Enter scores and push to broadcast — viewers see updates instantly" />
+
+The bottom bar shows two buttons:
+- **Push Scores** — sends current scores to the overlay
+- **End Session** — stops the live session
+
+> **Tip:** Push scores frequently — even partial results. Your viewers want to see standings change live, not wait until every team's score is entered.
+
+## Step 5: Between Matches
+
+After pushing final scores for a match:
+
+1. Switch OBS to your "Results" scene to show the full-screen overlay
+2. Let viewers absorb the standings
+3. Move to the next match tab in the scoring interface
+4. Switch OBS back to "Gameplay" scene when the next match starts
+5. Enter scores as they come in, push when ready
+
+## Step 6: End the Session
+
+When all matches are scored:
+
+1. Click **End Session**
+2. You'll see a summary of scored matches
+3. Choose to **Submit All Results** (saves to the tournament) or **Discard & Go Back**
+
+After submitting, results are locked into the tournament leaderboard and standings are finalized.
+
+## Quick Reference
+
+| Action | What happens |
+|--------|-------------|
+| **Push Scores** | Overlay updates instantly for viewers |
+| **Switch match tab** | Prompted to push unsaved changes first |
+| **End Session** | Overlay viewers disconnected, results ready to submit |
+| **Submit Results** | Scores saved to tournament, leaderboard finalized |
+
+## Standalone Sessions
+
+Don't have a tournament set up? Use **Standalone Live Scoring** from the sidebar to run a quick session with manually-added teams. Same overlay system, no tournament required. See [Standalone Live Scoring](/organizer/live-streaming/standalone-live-scoring).
+
+## Related
+
+- [Stream Overlays](/organizer/live-streaming/stream-overlays)
+- [Live Scoring](/organizer/live-streaming/live-scoring)
+- [Managing Matches](/organizer/running-matches/managing-matches)

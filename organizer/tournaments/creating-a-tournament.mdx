@@ -5,66 +5,100 @@ description: "Step-by-step guide to creating a multi-stage tournament on SquadsS
 
 This guide walks you through the tournament creation wizard from start to finish.
 
-## Step 1: Name, Description, and Poster
+{/* TODO: screenshot — Tournament creation wizard */}
 
-From your Organizer Dashboard, go to Tournaments and click Create. Choose Tournament as the event type.
+## Step 1: Tournament Details
 
-You'll start by filling in:
+From your Organizer Dashboard, go to **Tournaments** and click **Create**. Choose **Tournament** as the event type.
+
+This first step covers everything about your tournament setup:
+
+### Name, Description, and Poster
 
 - **Tournament name** — what players will see (e.g., "Phoenix Cup Season 3")
 - **Description** — rules, prizes, schedule, or anything players need to know
-- **Poster** — upload an image for your tournament (optional but recommended)
+- **Poster** — upload an image for your tournament (PNG, JPG, or WEBP — recommended 1600×900)
 
-## Step 2: Visibility and Registration Mode
+> **Tip:** A good poster makes your tournament stand out in listings. Use a clear, high-quality image.
 
-Choose who can see and join your tournament:
+### Prize Pool (Optional)
 
-**Public:**
-- **Open** — anyone can find and register. No approval needed.
-- **Approval Required** — anyone can find it and apply, but you manually approve each registration.
+If your tournament has a prize pool, toggle it on and configure:
 
-**Private:**
-- **Invite Only** — only players with your secure invite link can register. You can regenerate the link anytime if it gets leaked.
-- **Invite Only with Approval** — players need the invite link AND your approval. Best for paid scrims where you collect payment first, then share the link.
+- **Prize type** — Cash, Diamonds, or Mixed
+- **Amount** — the prize value and currency
 
-## Step 2: Game Mode and Slots
+### Format and Settings
 
-- **Game mode** — Solo, Duo, or Squad
-- **Slots** — how many teams can register. You set this based on your tournament size.
+- **Tournament Format** — Solo, Duo, or Squad
+- **Game Mode** — Battle Royale or Clash Squad
+- **Tournament Type** — Scrim, Tournament, or Major
+- **Visibility** — Public or Private
+- **Registration Mode** — Open, Approval Required, Invite Only, or Invite with Approval
+- **Slots** — how many teams can register
 
-## Step 3: Schedule
+See [Registration Modes](/organizer/tournaments/registration-modes) for details on when to use each.
+
+### Schedule
 
 Set your tournament timeline:
 
-- **Registration start** — when players can begin registering
-- **Registration close** — when registration ends
-- **Tournament start** — when matches begin
-- **Tournament close** — when the event ends (optional)
+- **Registration Opens** — when players can begin registering
+- **Registration Closes** — when registration ends
+- **Tournament Starts** — when matches begin
+- **Tournament Ends** — when the event ends (optional)
 
-## Step 4: Requirements
+> **Tip:** Leave at least a day between registration close and tournament start. This gives you time to set up groups, review registrations, and handle any issues.
+
+### Requirements
 
 Toggle the requirements players must meet to register:
 
-- **Registering user must join club** — the registering player must be a member of your club
-- **Require full roster** — the team must have the minimum number of members filled (e.g., 4 for Squad)
-- **Require all members in club** — every team member must be on the platform and be a member of your club. This auto-enables the first two requirements.
-- **Require UID/IGN** — players must provide their Free Fire User ID and In-Game Name. This auto-enables the full roster requirement.
+- **Require Club Membership** — the registering player must be a member of your club
+- **Require Full Roster** — the team must have the minimum number of members filled (e.g., 4 for Squad)
+- **Require All Members in Club** — every team member must be on the platform and a member of your club. This auto-enables the first two requirements.
+- **Require Game UID & IGN** — players must provide their Free Fire User ID and In-Game Name for this tournament. You can enable this with or without requiring a full roster.
 
-## Step 5: Communication Links and Point Table
+See [Registration Requirements](/organizer/tournaments/requirements) for when to use each.
 
-- **Communication links** — add your WhatsApp group link and Discord server invite so players know where your community lives
-- **Kill points** — how many points per kill (e.g., 1 kill = 1 point)
-- **Placement points** — points for each finishing position (1st through 12th)
+### Communication Links
 
-## After Creation
+- **Discord Server** — your Discord server invite link (optional)
+- **WhatsApp Group** — your WhatsApp group link (optional)
 
-Once your tournament is created, it starts in **Draft** status. From there it moves through these states:
+## Step 2: Game Configuration
+
+Configure your scoring and platform settings:
+
+### Scoring System
+
+- **Points per Kill** — how many points per kill (e.g., 1 kill = 1 point)
+- **Tiebreaker Priority** — Placement First or Kills First
+- **Placement Points** — points for each finishing position (1st through 12th for Squad, up to 48th for Solo)
+
+> **Tip:** Most Indian Free Fire tournaments use 1 point per kill. For placement, a common setup is: 1st = 12 points, 2nd = 9, 3rd = 8, scaling down to 12th = 0.
+
+### Allowed Platforms
+
+Select which platforms are allowed — Android, iOS, or PC. You can allow multiple.
+
+### Team Size
+
+Team size is automatically set based on your format (Solo = 1, Duo = 2, Squad = 4-6). This is display-only — you can't change it separately.
+
+## Step 3: Review & Create
+
+Review all your settings before creating. Everything is displayed in a summary view so you can double-check before confirming.
+
+## Step 4: Complete
+
+Your tournament is created and starts in **Draft** status. From here it moves through these states:
 
 - **Draft** — created but not visible to players
 - **Published** — visible to players, registration hasn't started yet
 - **Registration Open** — registration period is active
 - **Registration Closed** — registration ended, no more signups
-- **In Progress** — tournament has started
+- **Live** — tournament has started
 - **Completed** — tournament finished
 - **Paused** — temporarily paused
 - **Cancelled** — tournament cancelled
@@ -73,6 +107,6 @@ You can reopen registration after it closes. If the start date has already passe
 
 ## What's Next?
 
-- Build your tournament roadmap — see [Roadmap Builder](/organizer/tournaments/roadmap-builder)
-- Understand registration modes in detail — see [Registration Modes](/organizer/tournaments/registration-modes)
-- Set up groups — see [Automatic Group Creation](/organizer/tournaments/group-creation)
+- [Roadmap Builder](/organizer/tournaments/roadmap-builder) — build your tournament stages
+- [Registration Modes](/organizer/tournaments/registration-modes) — understand the 4 registration types
+- [Group Creation](/organizer/tournaments/group-creation) — set up groups for your stages

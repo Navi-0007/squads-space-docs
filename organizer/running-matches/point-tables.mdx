@@ -3,7 +3,7 @@ title: "Point Tables"
 description: "Configure kill points, placement points, and tiebreaker rules for your tournament."
 ---
 
-The point table defines how scores are calculated in your tournament or scrim. You set it during the creation wizard, and it applies to all matches across the event.
+The point table defines how scores are calculated in your tournament or scrim. You set it during the creation wizard (Step 2: Game Configuration), and it applies to all matches across the event.
 
 ## How Points Work
 
@@ -17,22 +17,28 @@ Points accumulate across all matches in a group (Elimination) or across all pair
 
 Set how much each kill is worth. For example, 1 kill = 1 point. This applies to the total team kill count per match.
 
+If UID/IGN is enabled and you use Player Kills mode when entering results, individual kills are tracked per player — but the team total still determines kill points.
+
 ## Placement Points
 
 Assign points for each finishing position in a match. You define how many points 1st place gets, 2nd place, 3rd place, and so on — all the way through your group size (e.g., 1st through 12th for a 12-squad group).
 
-A typical placement table might look like:
+A typical placement table for Squad mode:
 
-- 1st: 12 points
-- 2nd: 9 points
-- 3rd: 7 points
-- 4th: 5 points
-- 5th: 4 points
-- 6th: 3 points
-- 7th: 2 points
-- 8th–12th: 0 points
+| Position | Points |
+|----------|--------|
+| 1st | 12 |
+| 2nd | 9 |
+| 3rd | 7 |
+| 4th | 5 |
+| 5th | 4 |
+| 6th | 3 |
+| 7th | 2 |
+| 8th–12th | 0 |
 
 You can customize this however you like — use FFIC/FFWS official point tables or create your own.
+
+> **Tip:** The FFIC 2024 point table uses 1 point per kill and 12/9/8/7/6/5/4/3/2/1/0/0 for placement. This is a good starting point for competitive events.
 
 ## Tiebreaker Rules
 
@@ -41,12 +47,15 @@ When teams are tied on total points, the tiebreaker determines who ranks higher.
 - **Placement First** — Points → Placement → Kills → Matches played. Teams with better average placement rank higher.
 - **Kills First** — Points → Kills → Placement → Matches played. Teams with more total kills rank higher.
 
+> **Tip:** Most competitive tournaments use "Placement First" — it rewards consistent performance. Use "Kills First" for scrim-style events where aggression matters more.
+
 ## Where Points Are Used
 
 - **Match results** — when you enter placement and kills, the system calculates points automatically
 - **Group leaderboards** — cumulative standings within a group
 - **Stage leaderboards** — combined standings across all pairings (Round Robin)
-- **Stream overlays** — real-time leaderboard updates during broadcast
+- **Stream overlays** — leaderboard updates live during broadcast
+- **Smart Results** — points are calculated automatically when you upload a screenshot
 
 ## Related
 

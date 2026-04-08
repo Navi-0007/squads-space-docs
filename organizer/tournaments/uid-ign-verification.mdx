@@ -3,7 +3,7 @@ title: "UID/IGN Verification"
 description: "Why and when to require Free Fire UID and IGN from players."
 ---
 
-UID/IGN verification is an optional requirement you can enable when creating a tournament or scrim. When enabled, players must provide their Free Fire User ID (UID) and In-Game Name (IGN) during registration.
+UID/IGN verification is an optional requirement you can enable when creating a tournament or scrim. When enabled, players must provide their Free Fire User ID (UID) and In-Game Name (IGN) for that specific tournament.
 
 ## What It Enables
 
@@ -16,23 +16,32 @@ With verified UIDs, organizers can enter kills per individual player — not jus
 - Dispute resolution — verified kill counts tied to real identities
 - Player scouting — organizers and teams can spot talent based on actual performance data
 
-See [Managing Matches](/organizer/running-matches/managing-matches) for how to enter per-player kills during a match.
+### Smart Results
 
-### Player Stats (Coming Soon)
+When UID/IGN is enabled, Smart Results can automatically match scores to individual players. Upload a screenshot of the results screen, and the system identifies each player by their UID — no manual matching needed.
 
-When players provide their UID and IGN, their performance across tournaments gets recorded. We're already tracking this data, and it will power:
-
-- **Player profiles** — match history with individual kill stats tied to verified identities
-- **Stats tracking** — kills per match, average performance, tournament results
-- **Tiering system** — player rankings based on verified competitive data
-
-The more tournaments a player competes in with UID/IGN enabled, the richer their stats profile becomes.
+> **Tip:** Smart Results works best when UID/IGN is enabled. Without it, you can still upload screenshots, but scores are matched to teams only, not individual players.
 
 ### Anti-Fraud
 
 - Prevents unauthorized substitutions — players can't swap in without the organizer knowing
 - Reduces fake registrations — verified identities add accountability
 - Cleaner competitive environment overall
+
+## How UIDs Get Submitted
+
+UID/IGN is collected per tournament — players provide it for each event, not once globally. How it's submitted depends on your tournament setup:
+
+**With "Require Full Roster" enabled:**
+- Each team member provides their own UID and IGN individually
+- They do this from the Registration Status page after registering
+- A progress tracker shows which members have submitted and which haven't
+
+**Without "Require Full Roster":**
+- The person who registered the team submits UIDs and IGNs for all members together
+- They enter team member details in one form on the Registration Status page
+
+Players can also load a UID from their profile if they've saved one before — saving time across multiple tournaments.
 
 ## When to Use It
 
@@ -43,14 +52,18 @@ The more tournaments a player competes in with UID/IGN enabled, the richer their
 | Prize pool event | Definitely enable — you need accountability |
 | Practice lobby with friends | Skip it — unnecessary friction |
 
-## What Players Should Know
+> **Tip:** You can enable UID/IGN with or without requiring a full roster. For scrims where you want kill tracking but don't need full teams, enable UID alone.
 
-When you register for a tournament with UID/IGN verification, you'll need to provide your Free Fire UID and IGN during the registration process. This is set per tournament, so you enter it each time.
+## Where Organizers See UIDs
 
-Your UID/IGN data contributes to your stats profile on SquadsSpace. The more verified tournaments you play in, the better your stats and future tier ranking will reflect your skill.
+UID and IGN data appears in the registration detail panel. You'll see:
+
+- The registering player's UID and IGN
+- All team members' UIDs and IGNs (with status showing who submitted)
+- This data is also used in slot lists and score entry to identify players
 
 ## Related
 
-- [Managing Matches](/organizer/running-matches/managing-matches)
+- [Smart Results](/organizer/running-matches/managing-matches)
 - [Registration Requirements](/organizer/tournaments/requirements)
 - [Creating a Tournament](/organizer/tournaments/creating-a-tournament)

@@ -1,0 +1,134 @@
+---
+title: "How to Set Up Groups"
+description: "Configure auto-groups, seeding, invited slots distribution, and locking for your tournament stage."
+---
+
+import Screenshot from '/snippets/screenshot.mdx'
+import { ss_auto_groups_config, ss_auto_groups_preview, ss_groups_page_locked, ss_groups_multi_swap } from '/snippets/screenshots.mdx'
+
+This guide walks you through setting up groups for a tournament stage — from configuration to locking.
+
+## Before You Start
+
+You need:
+- A published roadmap with at least one stage
+- Registrations confirmed (or invited slots filled)
+
+## Step 1: Open Group Configuration
+
+From your stage's manage page, go to **Groups**. If no groups exist, click **Configure auto-create**.
+
+<Screenshot src={ss_auto_groups_config} alt="Auto-groups configuration" caption="Set naming, seeding, and fill strategies before generating groups" />
+
+## Step 2: Configure Group Settings
+
+### Group Naming
+
+Choose how groups are named:
+
+- **Auto-generate names** — set a prefix (e.g., "Group") and pattern (Letters A-Z or Numbers 1-9). Result: "Group A", "Group B", etc.
+- **Custom names** — name each group yourself (e.g., "Warriors Pool", "Legends Pool")
+
+> **Tip:** Use auto-generated names for qualifier stages (Group A, B, C...) and custom names for branded final stages.
+
+### Invited Slots Distribution
+
+If your stage has invited slots, choose how they're spread across groups:
+
+| Strategy | What happens | Best for |
+|----------|-------------|----------|
+| **Distribute evenly** | Invited teams spread across all groups | Fair competition |
+| **Concentrate** | Pack invited teams into early groups | Keeping them together |
+| **Seed into first groups** | Place invited teams in Group A first, then B, etc. | Priority seeding |
+
+### Seeding Strategy
+
+How registered teams are distributed:
+
+- **Balanced random** — shuffle teams while keeping groups even-sized. Works for most events.
+- **Rank-based** — distribute by skill tier (coming soon)
+
+### Fill Strategy
+
+How remaining slots are filled after invited teams are placed:
+
+- **Balance across all groups** — every group gets roughly the same number of teams
+- **Fill one group at a time** — fill Group A completely, then Group B, etc.
+
+> **Tip:** "Balance across all groups" is the right choice 90% of the time. Use "Fill one at a time" only when you want some groups to be full and others partially filled.
+
+## Step 3: Preview and Create
+
+1. Click **Preview Groups** to see how teams would be distributed
+2. Review the preview — check group sizes and which teams are where
+
+<Screenshot src={ss_auto_groups_preview} alt="Group preview" caption="Preview your groups before creating — check sizes and team placement" />
+
+3. If the preview looks good, click **Create Groups**
+4. A progress animation shows the groups being built
+
+> **Tip:** Always preview first. If the distribution doesn't look right, adjust your seeding or fill strategy and preview again.
+
+## Step 4: Review and Adjust
+
+After groups are created, you can:
+
+### Move Teams Between Groups
+
+Select one or more teams, then use the **Multi Swap** view to move them to a different group.
+
+<Screenshot src={ss_groups_multi_swap} alt="Multi Swap view" caption="Select teams and move them between groups" />
+
+> **Tip:** Use Multi Swap to manually balance groups if the auto-distribution put too many strong teams in one group.
+
+### Enable Auto-Assign (Optional)
+
+Toggle **Enable auto-assign** if registrations are still coming in. The system automatically distributes new registrations into groups every 15 minutes, using your fill and seeding strategies.
+
+Useful for large tournaments where registrations arrive over days or weeks.
+
+## Step 5: Lock Groups
+
+Before you can create matches, groups must be locked:
+
+<Screenshot src={ss_groups_page_locked} alt="Locked groups" caption="Green indicator = locked, amber = unlocked" />
+
+Locking means:
+- No more moving teams between groups
+- Auto-assign stops
+- Group composition is finalized
+- You can now create matches
+
+Each group shows a lock status indicator (green = locked, amber = unlocked).
+
+### Need to Make Changes After Locking?
+
+Use **Unlock Groups** at the top of the page. Only groups whose matches haven't started can be unlocked.
+
+> **Tip:** Do a final review before locking: check that invited slots are filled, team counts are balanced, and you're happy with the distribution. Once you create matches, unlocking becomes more disruptive.
+
+## Common Group Setups
+
+### 192-Team Qualifier (Squad)
+- 16 groups of 12 squads
+- Balanced random seeding
+- Balance fill across all groups
+- 0 invited slots
+
+### 64-Team Semifinals (Squad)
+- 8 groups of 8 squads
+- Balanced random seeding
+- Balance fill
+- Advancing teams from previous stage auto-registered
+
+### 24-Team Finals with Invited Pros (Squad)
+- 2 groups of 12 squads
+- 6 invited slots distributed evenly (3 per group)
+- Balanced random seeding for remaining 18 spots
+
+## Related
+
+- [Roadmap Builder](/how-to/roadmap-builder)
+- [Mass Operations](/how-to/mass-operations)
+- [Group Creation Reference](/organizer/tournaments/group-creation)
+- [Invited Slots](/organizer/tournaments/invited-slots)

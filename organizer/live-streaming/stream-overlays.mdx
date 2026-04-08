@@ -1,60 +1,69 @@
 ---
 title: "Stream Overlays"
-description: "Add real-time tournament leaderboards to your OBS stream with overlay URLs."
+description: "Add live tournament leaderboards to your OBS stream with overlay URLs."
 ---
 
-SquadsSpace generates overlay URLs that you can add as browser sources in OBS or any streaming software. They update in real-time as you enter scores — no manual graphic updates needed.
+SquadsSpace generates overlay URLs that you can add as browser sources in OBS or any streaming software. They update live as you enter scores — no manual graphic updates needed.
+
+{/* TODO: screenshot — Overlay in OBS */}
 
 ## Overlay Types
 
-When you start a live scoring session, the platform generates three overlay URLs:
+When you start a live scoring session, the platform generates overlay URLs in the **OBS Overlay URLs** modal:
 
-### Overall Standings (Side Overlay)
+### Overall Standings
 
-A compact leaderboard that updates in real-time as you enter scores. This is your main overlay during gameplay — add it as a browser source on the side of your stream. Uses the standings template you selected during broadcast setup.
+A compact side leaderboard that updates live as you enter scores. This is your main overlay during gameplay — add it as a browser source alongside your game feed. Uses the standings template you selected during broadcast setup.
 
-### Per-Match Results
+### Final Results Overlay
 
-Individual overlay URLs for each match (Match 1, Match 2, etc.). Shows placements, kills, and points for that specific match only. Use these to display results right after a match ends.
+A full-screen 16:9 overlay for broadcast-quality post-match displays. Uses the wide template you selected during broadcast setup. Perfect for dedicated results screens between matches — matches the look of professional Free Fire broadcasts like FFIC and FFWS.
 
-### Post-Match 16:9 Overlay
+### Match Overlays
 
-A full-screen 16:9 overlay designed for broadcast-quality post-match displays. Uses the wide template you selected during broadcast setup. Perfect for dedicated results screens between matches — matches the look of professional Free Fire broadcasts like FFIC and FFWS.
+Individual overlay URLs for each match. Two types per match:
 
-All overlay URLs also work for standalone live scoring sessions.
+- **Live Match** — shows scores updating live as you enter them for that specific match
+- **Match Standings** — shows the final placements, kills, and points for that match after completion
+
+These are organized under "Overall & Final" and "Match Overlays" sections in the modal.
 
 ## Broadcast Configuration
 
-Before starting a live scoring session, you can configure your broadcast display:
+Before starting a live scoring session, configure your broadcast display:
 
-- **Tournament name** — displayed on the overlay header
-- **Stage name** — shown alongside the tournament name
-- **Labels** — customize the "Overall" and "Match" labels
-- **Instagram handle** — displayed on overlays for branding
-- **Discord handle** — displayed on overlays for community promotion
-- **Template selection** — choose from available templates for your overlays
+- **Tournament** — name displayed on the overlay header (e.g., "Apex Series")
+- **Stage** — shown alongside the tournament name (e.g., "Grand Finals")
+- **Instagram Handle** — displayed on overlays for branding
+- **Discord Handle** — displayed on overlays for community promotion
+- **Template selection** — choose separate templates for standings and final overlays
+- **Custom backgrounds** — optional background overrides
 
 ## Adding to OBS
 
-1. Start a live scoring session from your group or pairing page
-2. Copy the overlay URL you want to use
-3. In OBS, add a new Browser Source
-4. Paste the URL
-5. Set the width and height to match your stream layout (1920x1080 for 16:9 overlays)
+1. Start a live scoring session from your group, pairing, or Live Scoring page
+2. Open the **OBS Overlay URLs** modal
+3. Copy the overlay URL you want to use
+4. In OBS, add a new **Browser Source**
+5. Paste the URL
+6. Set the width and height to match your stream layout (1920×1080 for 16:9 overlays)
 
-The overlay will automatically update as you enter scores during live scoring — no need to refresh or reconfigure.
+The overlay updates automatically as you enter scores — no need to refresh or reconfigure.
+
+> **Tip:** Set up your overlays in OBS before starting the live session. Add browser sources, position them, and test with a quick score entry. That way you're ready to go when the broadcast starts.
 
 ## Template Gallery
 
-SquadsSpace includes 21 broadcast-quality overlay templates in two categories:
+SquadsSpace includes broadcast-quality overlay templates in two categories:
 
-**Side overlays** (for live standings during matches) — 11 templates including Apex GFX, Apex Ice, Apex Crimson, Tactical Red, Tactical Amber, Tactical Cyan, Tactical Green, Squads Board, Luxury Gold, Luxury Crimson, Luxury Ice, Swiss Editorial, Swiss Carbon, and Swiss Cobalt.
+**Side overlays** (for live standings during matches) — includes Apex GFX, Apex Ice, Apex Crimson, Tactical variants, Squads Board, Luxury variants, and Swiss variants.
 
-**Wide 16:9 overlays** (for post-match full-screen displays) — 7 templates including Luxury Gold Wide, Luxury Crimson Wide, Luxury Ice Wide, Luxury Asymmetric, Swiss Editorial Wide, Swiss Carbon Wide, and Swiss Cobalt Wide.
+**Wide 16:9 overlays** (for post-match full-screen displays) — includes Luxury Wide, Luxury Asymmetric, and Swiss Wide variants.
 
-You choose separate templates for your live standings and post-match overlays during broadcast setup. Browse the template gallery to preview each one before selecting.
+You choose separate templates for your live standings and final overlays during broadcast setup. Browse the template gallery to preview each one before selecting.
 
 ## Related
 
 - [Live Scoring](/organizer/live-streaming/live-scoring)
+- [Standalone Live Scoring](/organizer/live-streaming/standalone-live-scoring)
 - [Managing Matches](/organizer/running-matches/managing-matches)

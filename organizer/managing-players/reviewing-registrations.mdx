@@ -5,17 +5,20 @@ description: "Manage, approve, reject, and track tournament registrations."
 
 The registrations page is your central hub for managing who's in your tournament. You can review individual registrations, take bulk actions, and track requirement completion.
 
+{/* TODO: screenshot — Registrations page */}
+
 ## Accessing Registrations
 
-From your tournament's dashboard, open the Registrations tab. You'll see stats at the top showing total, pending, confirmed, and rejected counts.
+From your Tournament Dashboard, open the **Registrations** tab. You'll see stats at the top showing total, pending, confirmed, and rejected counts.
 
 ## Filtering and Searching
 
 Filter registrations by status:
 
 - **All** — every registration
-- **Pending** — waiting for your approval (Approval Required and Invite Only with Approval modes)
+- **Pending** — waiting for your approval (Approval Required and Invite with Approval modes)
 - **Confirmed** — approved and counted toward slots
+- **Applied** — squad registration submitted, waiting for all members to join
 - **Rejected** — registrations you've rejected
 
 You can also search by name, squad name, or ID to find specific registrations quickly.
@@ -24,12 +27,14 @@ You can also search by name, squad name, or ID to find specific registrations qu
 
 Click on any registration to open a detail panel showing:
 
-- **Team information** — squad name, captain, registration date
+- **Team information** — squad name, registrant, registration date
 - **Members list** — all team members with their details
 - **Requirement progress** — which requirements are met and which are still pending (club membership, full roster, UID/IGN)
 - **Status** — current registration status
 
 From the detail panel, you can approve, reject, or delete individual registrations.
+
+> **Tip:** Check the requirement progress before approving. Even if a registration is pending approval, you might want to wait until the team has completed all requirements (like filling their roster or submitting UIDs).
 
 ## Bulk Actions
 
@@ -41,11 +46,15 @@ Select multiple registrations to take action in bulk:
 
 Bulk actions save time when you have many pending registrations to process — especially for large tournaments with Approval Required mode.
 
+> **Tip:** Use bulk approve after your registration deadline to confirm all pending teams at once, then bulk reject any that didn't meet your requirements.
+
 ## Registration Statuses
 
-- **Pending** — submitted but awaiting approval. Only applies to Approval Required and Invite Only with Approval modes.
-- **Confirmed** — approved (or auto-confirmed for Open/Invite Only modes). Counts toward your slot limit.
+- **Pending** — submitted but awaiting approval. Only applies to Approval Required and Invite with Approval modes.
+- **Confirmed** — approved (or auto-confirmed for Open and Invite Only modes). Counts toward your slot limit.
+- **Applied** — squad registration submitted, waiting for all members to join before it can be reviewed.
 - **Rejected** — registration was denied by the organizer.
+- **Cancelled** — registration was cancelled.
 
 ## Tips
 

@@ -7,18 +7,31 @@ A scrim is a single-group event with fixed slots. The creation flow is the same 
 
 ## Creating a Scrim
 
-From your Organizer Dashboard, go to Tournaments and click Create. Choose Scrim as the event type.
+From your Organizer Dashboard, go to **Tournaments** and click **Create**. Choose **Scrim** as the event type.
 
 You'll walk through the same creation wizard:
 
-1. **Name, description, and poster**
-2. **Visibility and registration mode** — Open, Approval Required, Invite Only, or Invite Only with Approval
-3. **Game mode** — Solo, Duo, or Squad
-4. **Slots** — fixed based on game mode: 12 (Squad), 24 (Duo), 48 (Solo). These can't be changed.
-5. **Schedule** — registration start, registration close, scrim start, scrim close (optional)
-6. **Requirements** — same toggles as tournaments (registering user must join club, full roster, all members in club, UID/IGN)
-7. **Communication links** — WhatsApp and Discord
-8. **Point table** — kill points and placement points
+### Step 1: Scrim Details
+
+- **Name, description, and poster** — give your scrim an identity
+- **Visibility and registration mode** — Open, Approval Required, Invite Only, or Invite with Approval
+- **Game mode** — Solo, Duo, or Squad
+- **Slots** — automatically set based on game mode: 12 (Squad), 24 (Duo), 48 (Solo). These can't be changed.
+- **Schedule** — registration open, registration close, scrim start, scrim end (optional)
+- **Requirements** — same toggles as tournaments (club membership, full roster, all members in club, UID/IGN)
+- **Communication links** — WhatsApp and Discord
+
+### Step 2: Game Configuration
+
+- **Kill points and placement points** — set your scoring system
+- **Tiebreaker priority** — Placement First or Kills First
+- **Allowed platforms** — Android, iOS, PC
+
+### Step 3: Review & Create
+
+Review all settings and confirm.
+
+> **Tip:** Scrims are great for testing your workflow before running a full tournament. Try out your point table, overlay setup, and Smart Results in a scrim first.
 
 ## After Creation
 
@@ -28,24 +41,26 @@ Once your scrim is created, you get a single group. There's no roadmap, no stage
 
 Your scrim page has four sections:
 
+{/* TODO: screenshot — Scrim management page */}
+
 ### Schedule
 
-Create matches (up to 8) and set the time for each one. Unlike tournaments, there's no mass operations — you manage everything from this one page.
-
-### Room ID & Password
-
-Enter the custom room credentials for each match. Players see these on the platform when the match starts.
+Create matches (up to 8) and set the time and map for each one. Enter the room ID and password — players see these on the platform when the match goes Live.
 
 ### Results
 
-Enter scores after each match:
+Enter scores after each match. You can use **Smart Results** (upload a screenshot) or enter scores manually:
 
 1. Select the match
 2. Enter placement and kills for each team
-3. If UID/IGN is enabled, choose between team kills or per-player kills
-4. Click Save
+3. If UID/IGN is enabled, choose between Team Kills or Player Kills mode
+4. Click **Save**
 
 Points accumulate across all matches. The leaderboard shows total points across the entire scrim.
+
+### Live Scoring
+
+If you're streaming, start a live scoring session to enter scores with instant overlay updates. See [Live Scoring](/organizer/live-streaming/live-scoring) for the full workflow.
 
 ### Announcements
 
@@ -53,10 +68,16 @@ Post updates for participants — schedule changes, delays, or any other info pl
 
 ## Scrim States
 
-Scrims follow the same states as tournaments: Draft → Published → Registration Open → Registration Closed → In Progress → Completed (plus Paused and Cancelled).
+Scrims follow the same states as tournaments: Draft → Published → Registration Open → Registration Closed → Live → Completed (plus Paused and Cancelled).
 
 You can reopen registration after it closes. If the start date has passed, you'll need to set a new one.
 
 ## When to Use a Scrim vs Tournament
 
 If you're running a single-group event — weekly practice, daily lobbies, casual competitive — use a scrim. If you need multiple stages, advancement, or invited slots, use a tournament. See [Scrims vs Tournaments](/getting-started/scrims-vs-tournaments) for a full comparison.
+
+## Related
+
+- [Scrims vs Tournaments](/getting-started/scrims-vs-tournaments)
+- [Managing Matches](/organizer/running-matches/managing-matches)
+- [Live Scoring](/organizer/live-streaming/live-scoring)

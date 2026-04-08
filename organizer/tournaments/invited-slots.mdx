@@ -13,33 +13,46 @@ When you configure your roadmap, you specify how many invited slots a stage has.
 
 Each stage with invited slots has a dedicated Invited Slots page. From here you can:
 
-- **Get your invite link** — a secure link you share with the teams you want to invite
-- **Regenerate the link** — if it gets leaked, regenerate to invalidate the old one
+{/* TODO: screenshot — Invited Slots page */}
+
+- **Copy the invite link** — a secure link you share with the teams you want to invite
+- **Rotate Token** — if the link is active and gets leaked, rotate to invalidate the old link and generate a new one
+- **Regenerate Link** — create a fresh invite link if the current one is inactive
+- **Revoke Link** — permanently deactivate the current invite link
 - **Track capacity** — see how many invited slots are filled vs remaining
-- **View joined squads** — see which teams have accepted and joined through the invite link
+- **View joined squads** — see which teams have accepted with their team name, registration date, group assignment, and status
+
+### Actions on Joined Teams
+
+For each team that joined through the invite link, you can:
+
+- **Approve** or **Reject** — if the tournament uses Approval Required mode
+- **View Members** — see the team's roster details
+- **Remove** — remove a team from the invited slots (requires confirmation)
 
 ## How Players Register via Invite Link
 
 When a player receives your invite link, they have two ways to register:
 
-- **Global Squad** — register with their existing squad on the platform. They select which members to include, same as regular registration.
-- **Solo registration** — one player registers alone for the invited slot. They provide their IGN and UID if required by the tournament.
+- **Global Squad** — register with their existing squad on the platform, same as regular registration
+- **Solo registration** — register alone and provide their IGN and UID if required by the tournament
 
-## Approval Required
+## Approval and Invite Links
 
-If your tournament uses an Approval Required registration mode, invited registrations still need your approval before they're confirmed. Invited teams appear in your registrations dashboard as Pending, just like regular registrations. You review and approve or reject them the same way.
+If your tournament uses Approval Required mode, invited registrations still need your approval before they're confirmed. Invited teams appear as "Pending" in the joined squads list. You approve or reject them from the action menu.
 
 For Open registration tournaments, invited teams are confirmed automatically when they register through the link.
 
 ## The Invite Flow
 
 1. Open the stage's Invited Slots page
-2. Copy the invite link
+2. Copy the invite link (or create one if none exists)
 3. Share it with the teams you want to invite (WhatsApp, Discord, DM, etc.)
 4. Invited teams use the link to register (Global Squad or solo)
-5. If Approval Required, approve their registration
-6. They appear in your joined squads list
-7. When you generate groups, invited teams are distributed based on your invited slots handling strategy (balanced, stacked, or frontload)
+5. If Approval Required, approve their registration from the joined squads list
+6. When you create groups, invited teams are distributed based on your invited slots handling strategy (distribute evenly, concentrate, or seed into first groups)
+
+> **Tip:** Rotate the token instead of revoking the link if you just want to block the old URL. Rotating creates a new link instantly while keeping the invite batch active.
 
 ## When to Use Invited Slots
 
@@ -48,13 +61,7 @@ For Open registration tournaments, invited teams are confirmed automatically whe
 - **Sponsor obligations** — guarantee spots for specific teams
 - **Balancing competition** — ensure strong teams are spread across the tournament
 
-## Example
-
-**Tournament: Phoenix Cup**
-- Stage 1: Open Qualifiers — 192 squads, Elimination
-- Stage 2: Grand Finals — 24 squads, Round Robin, 6 invited slots
-
-You share the invite link with 6 pro squads. They join through the link — some with their Global Squad, some registering solo. When you generate groups for Grand Finals, the system places those 6 invited squads based on your handling strategy, and fills the remaining 18 slots with teams advancing from Qualifiers.
+> **Example:** Phoenix Cup — Stage 1: Open Qualifiers (192 squads, Elimination). Stage 2: Grand Finals (24 squads, Round Robin, 6 invited slots). You share the invite link with 6 pro squads. When you create groups for Grand Finals, the system places those 6 invited squads based on your handling strategy, and fills the remaining 18 slots with teams advancing from Qualifiers.
 
 ## Related
 

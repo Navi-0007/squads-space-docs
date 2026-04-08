@@ -3,7 +3,7 @@ title: "Scrims vs Tournaments"
 description: "When to use a scrim vs a full tournament, and the key differences."
 ---
 
-SquadsSpace supports two event types: Scrims and Tournaments. Both follow the same creation flow — name, description, poster, visibility, registration mode, game mode, requirements, communication links, and point table. The difference is in structure.
+SquadsSpace supports two event types: **Scrims** and **Tournaments**. Both follow the same creation flow — name, description, poster, visibility, registration mode, game mode, requirements, communication links, and point table. The difference is in structure.
 
 ## Scrims
 
@@ -18,7 +18,7 @@ A scrim is a single-group event with fixed slots. Think of it as a practice lobb
 
 **Features:**
 - Schedule with room ID and password for each match
-- Upload and view results
+- Upload and view results (manual or Smart Results)
 - Announcements section for updates to participants
 - Live leaderboard and stream overlays
 
@@ -28,7 +28,7 @@ A scrim is a single-group event with fixed slots. Think of it as a practice lobb
 - You want cumulative points across multiple matches
 - You don't need stages or advancement
 
-**Example:** 12 squads play 6 custom rooms on a Saturday evening. After all 6 matches, the leaderboard shows total points across all games. The top squad wins.
+> **Example:** 12 squads play 6 custom rooms on a Saturday evening. After all 6 matches, the leaderboard shows total points across all games. The top squad wins.
 
 ## Tournaments
 
@@ -43,7 +43,7 @@ A tournament is a multi-stage event with a roadmap. Teams progress through stage
 **Stage types:**
 
 - **Elimination** — teams play in groups, top performers advance to the next stage. Best for narrowing down a large field quickly.
-- **Round Robin** — each group plays every other group once through auto-generated pairings. The system creates pairings based on your configuration (group names, seeding strategy, etc.). Combined leaderboard across all pairings determines final standings. Best for final stages where you want the fairest evaluation.
+- **Round Robin** — groups are paired against each other with auto-generated matchups. Combined leaderboard across all pairings determines final standings. Best for final stages where you want the fairest evaluation.
 
 Different stages in the same tournament can use different formats — for example, Elimination qualifiers into a Round Robin finals. This is how major events like FFIC and FFWS operate.
 
@@ -51,9 +51,9 @@ Different stages in the same tournament can use different formats — for exampl
 - You're running a competitive event with multiple rounds
 - Teams need to qualify and advance through stages
 - You want elimination, round robin, or a mix of both
-- You need invited slots for pro teams
+- You need invited slots for pro teams or direct qualifiers
 
-**Example:** 192 teams enter Open Qualifiers (16 groups of 12, Elimination). Top 4 from each group advance to Semifinals (8 groups of 8). Top 3 from each advance to Grand Finals (Round Robin — groups are paired against each other, combined leaderboard determines the champion).
+> **Example:** 192 teams enter Open Qualifiers (16 groups of 12, Elimination). Top 4 from each group advance to Semifinals (8 groups of 8). Top 3 from each advance to Grand Finals (Round Robin — groups are paired against each other, combined leaderboard determines the champion).
 
 ## Key Differences
 
@@ -68,8 +68,18 @@ Different stages in the same tournament can use different formats — for exampl
 | Matches per group | Up to 8 | Up to 8 |
 | Announcements | Yes | Yes |
 | Round Robin pairings | No | Yes (auto-generated) |
+| Smart Results | Yes | Yes |
+| Stream overlays | Yes | Yes |
 | Best for | Practice, weekly events | Competitive events, opens |
 
 ## Can I Convert Between Them?
 
-Currently, you can't convert a scrim into a tournament or vice versa. Choose the right type when creating your event. If you're unsure, start with a scrim — it's simpler to set up and you can always create a tournament later.
+Currently, you can't convert a scrim into a tournament or vice versa. Choose the right type when creating your event.
+
+> **Tip:** If you're unsure, start with a scrim. It's faster to set up and perfect for testing your workflow — point tables, overlays, Smart Results. Once you're comfortable, create a tournament for your competitive events.
+
+## Related
+
+- [Creating a Scrim](/organizer/scrims/creating-a-scrim)
+- [Creating a Tournament](/organizer/tournaments/creating-a-tournament)
+- [Roadmap Builder](/organizer/tournaments/roadmap-builder)

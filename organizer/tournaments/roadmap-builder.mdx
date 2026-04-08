@@ -3,19 +3,27 @@ title: "Roadmap Builder"
 description: "Build multi-stage tournaments with Elimination and Round Robin formats."
 ---
 
-The Roadmap Builder is where you define your tournament's stages and how teams progress through them. Once created, the roadmap is locked — so plan your structure before building it.
+The Roadmap Builder is where you define your tournament's stages and how teams progress through them.
+
+## Getting Started
+
+From your Tournament Dashboard, go to the **Roadmap** tab. If no roadmap exists yet, click **Configure** to open the builder.
+
+{/* TODO: screenshot — Roadmap Builder */}
 
 ## Building Your Roadmap
 
-From your tournament's manage page, open the Roadmap Builder. For each stage you add:
+For each stage you add, configure:
 
-1. **Stage name** — e.g., "Open Qualifiers", "Semifinals", "Grand Finals"
-2. **Stage type** — Elimination or Round Robin
-3. **Slots** — how many teams in this stage
-4. **Advancement** — how many teams advance to the next stage (for Elimination)
-5. **Invited slots** — whether this stage has directly invited teams
+- **Entrants** — total teams in this stage (auto-calculated for later rounds based on qualifiers + invited slots)
+- **Invited Slots** — extra squads you manually add to this round, on top of qualifying squads. Use for partner teams, wildcard entries, or defending champions.
+- **Group Size** — how many teams per group (based on game mode — e.g., 12 for Squad)
+- **Group Count** — auto-calculated based on entrants and group size
+- **Qualifiers per Group** — how many teams advance from each group
+- **Matches per Group** — how many matches each group plays
+- **Final Round** — check this for the last stage (limits to 1 group, requires a winner count)
 
-The system calculates everything automatically — group counts, how many need to advance from prior stages to fill remaining slots, etc.
+The system calculates totals automatically — group counts, how many need to advance from prior stages to fill remaining slots, etc.
 
 ## Stage Types
 
@@ -23,51 +31,49 @@ The system calculates everything automatically — group counts, how many need t
 
 Teams are divided into groups, and matches happen within each group. Top performers advance to the next stage.
 
-- Each group contains teams based on the game mode (e.g., 12 squads per group, since a custom room holds 12 squads)
+- Each group contains teams based on the game mode (e.g., 12 squads per group)
 - Each group plays up to 8 matches
 - Points accumulate across matches within the group
 - Top teams from each group advance to the next stage
 
 **Best for:** Early stages where you need to narrow down a large number of teams quickly.
 
-**Example:** Open Qualifiers — 192 squads in 16 groups of 12. Each group plays 4 matches in their own custom rooms. Top 4 from each group advance to Semifinals.
+> **Example:** Open Qualifiers — 192 squads in 16 groups of 12. Each group plays 4 matches. Top 4 from each group advance to Semifinals.
 
 ### Round Robin
 
 Teams are split into groups, but unlike Elimination, matches happen in pairings — not within individual groups. Each group plays every other group once.
 
 - Groups are created first (e.g., 3 groups of 6 squads)
-- Pairings are configured after the roadmap is created, from the stage's manage page
-- The system auto-generates pairings based on your configuration (group names, seeding strategy, etc.)
+- Pairings are configured after the roadmap is published, from the stage's manage page
+- The system generates pairings automatically based on your configuration
 - A pairing is where two groups face each other — that's where the actual matches take place
 - Combined leaderboard across all pairings determines final standings
 
 **Best for:** Final stages where you want the fairest possible evaluation across all remaining teams.
 
-**Example:** Grand Finals — 18 squads in 3 groups of 6. Group A vs Group B, Group A vs Group C, Group B vs Group C — 3 pairings total. Combined leaderboard across all pairings determines the champion.
+> **Example:** Grand Finals — 18 squads in 3 groups of 6. Group A vs Group B, Group A vs Group C, Group B vs Group C — 3 pairings total. Combined leaderboard determines the champion.
 
 ## Mixing Formats
 
 Different stages in the same tournament can use different formats. This is how major events like FFIC and FFWS operate.
 
-**Example tournament:**
-- **Stage 1: Open Qualifiers** — Elimination, 192 squads in 16 groups of 12, top 4 advance
-- **Stage 2: Semifinals** — Elimination, 64 squads in 8 groups of 8, top 3 advance
-- **Stage 3: Grand Finals** — Round Robin, 24 squads in 4 groups of 6, pairings determine the champion
+> **Example tournament:**
+> - **Stage 1: Open Qualifiers** — Elimination, 192 squads in 16 groups of 12, top 4 advance
+> - **Stage 2: Semifinals** — Elimination, 64 squads in 8 groups of 8, top 3 advance
+> - **Stage 3: Grand Finals** — Round Robin, 24 squads in 4 groups of 6, pairings determine the champion
 
-## After the Roadmap Is Created
+## Publishing Your Roadmap
 
-Once your roadmap is set, it's locked. You'll see all your stages on the manage tournament page. From each stage you can:
+Once your stages are configured, click **Publish**. You can edit the roadmap before publishing, but once published the stage structure is set.
 
-- Configure groups
-- Configure pairings (Round Robin stages only)
-- Manage matches — both group pages (Elimination) and pairing pages (Round Robin) share the same layout: Schedule, ID/Password, Results, and Announcements
+After publishing, each stage shows a **Manage** button to access group creation, match management, and more.
 
-## Downloading Your Roadmap
+## Roadmap Poster
 
-You can download your roadmap as a shareable image using one of the free demo templates, or as a PDF. Share it in your WhatsApp and Discord groups so players can see the full tournament journey.
+You can turn your roadmap into a shareable poster image. Choose from 4 poster templates — Neon, Nebula, Inferno, or Phantom — and download a high-resolution PNG to share in your WhatsApp and Discord groups.
 
-More templates coming soon.
+> **Tip:** Share the roadmap poster when you announce your tournament. Players want to see the full journey — how many stages, how teams advance, and what the finals look like.
 
 ## Related
 

@@ -1,0 +1,81 @@
+# ============================================================
+# DOCS SYNC SCRIPT — squads-space-docs → Navi-0007/squads-space-docs
+# ============================================================
+#
+# HOW THIS WORKS
+# --------------
+# All dev work lives in the MONOREPO workspace under:
+#   squads-space-docs-main/squads-space-docs-main/
+#
+# The prod docs repo lives at:
+#   github.com/Navi-0007/squads-space-docs
+#
+# This script rsync-copies the docs directory from the workspace
+# into the root of the prod repo on the target branch, then
+# commits and pushes. It is NOT a git merge — it's a file sync.
+#
+# DOCS DEPLOYMENT FLOW
+# --------------------
+#   Prod account repo    : github.com/Navi-0007/squads-space-docs
+#     Branches            : staging → main
+#     Hosting             : Mintlify (auto-deploys from main)
+#
+# CANONICAL FLOW
+# --------------
+#   1. Edit docs in the monorepo workspace
+#
+#   2. Sync to staging branch in prod account:
+#        DEST_BRANCH=staging bash squads-space-docs-main/squads-space-docs-main/gitcommands
+#
+#   3. Verify on Mintlify staging preview (if configured)
+#
+#   4. When ready for prod — open a PR in Navi-0007/squads-space-docs:
+#        staging → main
+#      Merging triggers Mintlify auto-deploy.
+#
+# USAGE
+# -----
+#   DEST_BRANCH=staging bash squads-space-docs-main/squads-space-docs-main/gitcommands
+#   DEST_BRANCH=main COMMIT_MSG="docs: update registration guides" bash squads-space-docs-main/squads-space-docs-main/gitcommands
+#
+set -euo pipefail
+
+SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+
+# The docs content directory (where docs.json lives)
+DOCS_SRC="${SCRIPT_DIR}"
+
+DEST_BRANCH="${DEST_BRANCH:-staging}"
+REPO_URL="${REPO_URL:-https://github.com/Navi-0007/squads-space-docs.git}"
+COMMIT_MSG="${COMMIT_MSG:-Sync docs to ${DEST_BRANCH}}"
+
+TMP_DIR="/tmp/squads-space-docs"
+
+# Safety check
+if [[ ! -f "${DOCS_SRC}/docs.json" ]]; then
+  echo "ERROR: docs.json not found in ${DOCS_SRC}. Wrong directory? Aborting."
+  exit 1
+fi
+
+# Fresh clone every time
+rm -rf "${TMP_DIR}"
+git clone "${REPO_URL}" "${TMP_DIR}"
+
+git -C "${TMP_DIR}" fetch origin
+git -C "${TMP_DIR}" checkout -B "${DEST_BRANCH}" "origin/${DEST_BRANCH}" \
+  || git -C "${TMP_DIR}" checkout -B "${DEST_BRANCH}"
+
+# Sync docs content to repo ROOT
+rsync -a --checksum --delete \
+  --exclude '.git' \
+  --exclude '.github' \
+  "${DOCS_SRC}/" "${TMP_DIR}/"
+
+if [[ -z "$(git -C "${TMP_DIR}" status --porcelain)" ]]; then
+  echo "No changes to commit — already up to date."
+else
+  git -C "${TMP_DIR}" add -A
+  git -C "${TMP_DIR}" commit -m "${COMMIT_MSG}"
+  git -C "${TMP_DIR}" push origin "${DEST_BRANCH}"
+  echo "✓ Pushed to ${DEST_BRANCH}"
+fi

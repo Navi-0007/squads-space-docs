@@ -3,26 +3,49 @@ title: "Editing a Tournament"
 description: "Update tournament details after creation."
 ---
 
-You can edit your tournament after creating it. From the Tournament Dashboard, go to Edit to open the editing wizard.
+You can edit your tournament after creating it. From the Tournament Dashboard, click **Edit** to open the editor.
 
-## What You Can Edit
+{/* TODO: screenshot — Tournament edit page */}
 
-The edit page uses the same wizard layout as creation. You can update:
+## Layout
 
-- Name, description, and poster
-- Visibility and registration mode
-- Schedule dates (registration open/close, tournament start/close)
-- Requirements
-- Communication links (WhatsApp, Discord)
-- Point table configuration
+The edit page uses expandable sections (not the same wizard as creation). You'll see four sections:
+
+- **Tournament Details** — name, description, poster, format, visibility, requirements
+- **Schedule** — registration and tournament dates
+- **Game Settings** — scoring, platforms, team size
+- **Communication** — Discord and WhatsApp links
+
+Open any section to make changes.
+
+## Field Restrictions
+
+Some fields become locked as your tournament progresses. Locked fields show a colored badge:
+
+- **Red badge** — field is fully locked and can't be changed
+- **Amber badge** — field has a timing restriction (can only be extended or delayed, not shortened)
+
+Hover over the badge to see why the field is locked.
+
+### What gets locked and when:
+
+- **After publishing:** Format, game mode, visibility, slots, and team size — changing these would confuse players who've already seen the tournament.
+- **After registration opens:** Registration mode, club membership requirements, and UID/IGN settings — changing requirements mid-registration would be unfair.
+- **After tournament goes Live:** Scoring settings (kill points, placement points, tiebreaker) — changing scoring mid-tournament would invalidate existing results.
+- **Communication links** (WhatsApp, Discord) are always editable, regardless of status.
+
+### Date restrictions after publishing:
+
+- **Registration Opens** can only be delayed (moved later), not moved earlier
+- **Tournament Ends** can only be extended (moved later), not shortened
+
+This prevents confusing players who've already planned around your schedule.
 
 ## Draft Tournaments
 
-If your tournament is still in Draft status, you'll see a banner with the option to publish directly from the edit page. Draft tournaments aren't visible to players until published.
+If your tournament is still in Draft status, everything is editable. You'll see a banner with the option to publish directly from the edit page.
 
-## Restrictions
-
-Some fields may be restricted based on the tournament's current status. For example, you can't change the game mode or format after registrations have started, since it would affect existing team compositions.
+> **Tip:** Take your time editing while in Draft — once you publish, some fields get locked permanently. Get format, game mode, and slots right before publishing.
 
 ## Related
 

@@ -3,15 +3,15 @@ title: "Mass Operations"
 description: "Create, schedule, and manage matches across all groups or pairings from a single page."
 ---
 
-Mass Operations lets you manage matches across all groups or pairings in a stage from a single page — instead of navigating to each group individually. This is essential for large tournaments with many groups.
+Mass Operations lets you manage matches across all groups or pairings in a stage from a single page — instead of navigating to each group individually. Essential for large tournaments with many groups.
 
-## Mass Create
+## Create Matches
 
 Create matches for multiple groups or pairings at once. The flow has four steps:
 
 ### 1. Select Groups or Pairings
 
-Choose which groups (Elimination) or pairings (Round Robin) you want to create matches for. You can select all of them or pick specific ones.
+Choose which groups (Elimination) or pairings (Round Robin) you want to create matches for. You can select all or pick specific ones.
 
 ### 2. Match Counts
 
@@ -21,28 +21,34 @@ Set how many matches to create for each selected group or pairing. Each one can 
 
 Choose how match times are generated:
 
-- **Sequential** — matches are spaced by an interval from a start time. You set the interval (minimum 20 minutes) and choose the scope:
-  - **Per group** — each group runs its own timeline. You can optionally set a custom start time for each group.
-  - **Global** — one continuous timeline across all selected groups. Every next match starts after the interval, regardless of which group it belongs to.
+- **Sequential** — matches are spaced by an interval from a start time. You set the interval and choose the scope:
+  - **Parallel by Group/Pairing** — each group runs its own timeline. You can optionally set a custom start time for each group.
+  - **Global Sequential** — one continuous timeline across all selected groups. Every next match starts after the interval, regardless of which group it belongs to.
 - **Same Time** — all matches start at exactly the same time. Use this when all groups play simultaneously.
-- **Skip for now** — create matches without start times. You can schedule them later from Mass Manage.
+- **Create Without Schedule** — create matches without start times. You can schedule them later from Mass Manager.
 
-For sequential scheduling, you can use interval presets (20, 30, 45, or 60 minutes) or enter a custom interval.
+For sequential scheduling, use interval presets (20, 30, 45, or 60 minutes) or enter a custom interval.
+
+> **Tip:** Use "Parallel by Group/Pairing" when different groups play in separate custom rooms at their own pace. Use "Global Sequential" when you're running all groups through a single stream schedule.
 
 ### 4. Maps
 
 Choose the map for each match:
 
 - **Same for all** — one map for every match across all selected groups
-- **Custom per group** — select a different map for each match in each group. For groups with more than 2 matches, maps must be selected in order.
+- **Custom per Group/Pairing** — select a different map for each match in each group
 
-## Mass Manage
+## Mass Manager
 
-After matches are created, Mass Manage lets you bulk-edit schedules and match details across all groups from one page. This is where you go to schedule matches that were created with "Skip for now", or to update times across multiple groups at once.
+After matches are created, Mass Manager lets you bulk-edit schedules and match details across all groups from one page. Update times, maps, room IDs, and passwords — without navigating to each group individually.
 
-## Mass Results
+This is where you go to schedule matches that were created with "Create Without Schedule".
+
+## Mass Resultor
 
 Enter scores for matches across all groups from a single page. Select which group and match to update, enter results, and move to the next — without navigating back and forth between group pages.
+
+> **Tip:** Mass Resultor is fastest when you're entering results for multiple groups after a round finishes. Enter results group by group without leaving the page.
 
 ## When to Use Mass Ops
 

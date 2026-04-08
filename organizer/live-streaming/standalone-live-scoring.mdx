@@ -1,13 +1,13 @@
 ---
 title: "Standalone Live Scoring"
-description: "Run live scoring sessions outside of tournaments for quick scrims, practice lobbies, and community events."
+description: "Run live scoring sessions without creating a tournament — for quick scrims, practice lobbies, and community events."
 ---
 
-Standalone Live Scoring (also called RT Scoring) lets you run a scoring session without creating a tournament or scrim first. It's accessible from the Organizer sidebar under Live Scoring.
+Standalone Live Scoring lets you run a scoring session without creating a tournament or scrim first. Access it from the Organizer sidebar under **Live Scoring**.
 
 ## When to Use It
 
-Use standalone scoring when you need a quick, lightweight scoring setup:
+Use standalone scoring when you need a quick, lightweight setup:
 
 - Practice lobbies where you don't need registrations
 - Community events where teams are decided on the spot
@@ -21,15 +21,17 @@ The creation flow has three steps:
 ### 1. Basic Info
 
 - **Session name** — what to call this session
-- **Kill tracking** — choose between team kills or per-player kills
+- **Kill tracking** — choose between Team Kills or Player Kills
 - **Match count** — how many matches you'll play
 
 ### 2. Teams
 
-Add teams to the session. You can:
+Add teams to the session:
 
 - Add teams manually one by one with team names and player names
 - Import teams in bulk
+
+> **Tip:** For practice lobbies, just add team names — you can skip individual player names if you don't need per-player kill tracking.
 
 ### 3. Points Config
 
@@ -37,12 +39,13 @@ Set up your scoring system — kill points, placement points, and tiebreaker rul
 
 ## Running the Session
 
-After creation, you're taken to the session's start page. From here:
+After creation, you're taken to the session's setup page. From here:
 
-1. Configure your broadcast settings (tournament name, handles, templates)
-2. Start the session to generate overlay URLs
-3. Add overlay URLs to OBS as browser sources
-4. Enter scores match by match — overlays update in real-time
+1. Configure your broadcast settings (tournament name, stage name, handles, templates)
+2. Click **Start Live Scoring** to begin the session
+3. Open the **OBS Overlay URLs** modal and copy your overlay links
+4. Add overlay URLs to OBS as browser sources
+5. Enter scores match by match — click **Push Scores** to update overlays instantly
 
 The scoring interface is the same as tournament live scoring — placement and kills per team, with instant overlay updates.
 
@@ -50,13 +53,13 @@ The scoring interface is the same as tournament live scoring — placement and k
 
 Standalone sessions generate the same overlay types as tournament live scoring:
 
-- Per-match result overlays
-- Overall standings overlay
-- Post-match 16:9 overlay (when using wide templates)
+- Overall Standings (side overlay)
+- Final Results (16:9 wide overlay)
+- Per-match overlays (live + standings per match)
 
 ## Managing Sessions
 
-From the Live Scoring dashboard, you can see all your sessions — active and past. Each session card shows the session name, team count, match count, and status.
+From the Live Scoring page in the sidebar, you can see all your sessions — active and past. Each session card shows the session name, team count, match count, and status.
 
 ## Related
 

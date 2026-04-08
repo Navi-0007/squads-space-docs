@@ -1,0 +1,120 @@
+---
+title: "How to Build a Tournament Roadmap"
+description: "Step-by-step guide to creating a multi-stage tournament structure with stages, advancement, and invited slots."
+---
+
+import Screenshot from '/snippets/screenshot.mdx'
+import { ss_roadmap_builder_empty, ss_roadmap_builder_stages, ss_roadmap_builder_stage_config, ss_roadmap_builder_published, ss_roadmap_poster_templates, ss_roadmap_poster_download } from '/snippets/screenshots.mdx'
+
+This guide walks you through building a complete tournament roadmap — from planning your stages to sharing the roadmap poster with your community.
+
+## Before You Start
+
+You need a tournament created first (in Draft or Published status). If you haven't created one yet, see [Creating a Tournament](/organizer/tournaments/creating-a-tournament).
+
+## Step 1: Open the Roadmap Builder
+
+From your Tournament Dashboard, go to the **Roadmap** tab. Click **Configure** to open the builder.
+
+<Screenshot src={ss_roadmap_builder_empty} alt="Empty roadmap state" caption="The Roadmap tab before configuration — click Configure to start" />
+
+## Step 2: Plan Your Stages
+
+Before building, plan your tournament structure. Ask yourself:
+
+- **How many stages?** (e.g., Qualifiers → Semifinals → Finals)
+- **How many teams per stage?** (first stage = total registrations, later stages = qualifiers + invited)
+- **Elimination or Round Robin for each stage?**
+- **Any invited slots?** (pro teams, defending champions, wildcards)
+
+> **Example: Phoenix Cup**
+> - Stage 1: Open Qualifiers — 192 squads, Elimination, top 4 per group advance
+> - Stage 2: Semifinals — 64 squads, Elimination, top 3 per group advance
+> - Stage 3: Grand Finals — 24 squads, Round Robin, 6 invited pro teams
+
+## Step 3: Add Your First Stage
+
+For each stage, configure:
+
+| Field | What it means | Example |
+|-------|--------------|---------|
+| **Entrants** | Total teams in this stage | 192 |
+| **Invited Slots** | Extra teams invited directly (on top of qualifiers) | 0 for first stage |
+| **Group Size** | Teams per group (based on game mode) | 12 for Squad |
+| **Qualifiers per Group** | How many advance from each group | 4 |
+| **Matches per Group** | How many matches each group plays | 4 |
+
+The system auto-calculates group count based on entrants and group size.
+
+<Screenshot src={ss_roadmap_builder_stage_config} alt="Stage configuration" caption="Configuring a stage — entrants, group size, qualifiers, and matches" />
+
+## Step 4: Add More Stages
+
+Click to add the next stage. For stages after the first:
+
+- **Entrants** auto-fills based on how many teams qualify from the previous stage + invited slots
+- Set the invited slots if you want to add directly-invited teams to this stage
+- Choose **Elimination** or **Round Robin** — you can mix formats across stages
+
+> **Tip:** Use Elimination for early stages (narrows the field fast) and Round Robin for the final stage (fairest evaluation across all remaining teams).
+
+## Step 5: Check the Final Stage
+
+For the last stage, check the **Final Round** checkbox. This:
+
+- Limits the stage to 1 group
+- Asks for a winner count (how many teams win prizes)
+- Marks this as the tournament's conclusion
+
+<Screenshot src={ss_roadmap_builder_stages} alt="Complete roadmap with all stages" caption="A complete 3-stage roadmap — qualifiers, semifinals, finals" />
+
+## Step 6: Publish the Roadmap
+
+Review your stages, then click **Publish**. Once published:
+
+- The stage structure is set
+- Each stage shows a **Manage** button for group creation and match management
+- You can still edit stage names from Stage Settings
+
+> **Tip:** Double-check your qualifiers-per-group numbers before publishing. After publishing, you can't change the stage structure — only stage names.
+
+<Screenshot src={ss_roadmap_builder_published} alt="Published roadmap" caption="Published roadmap — each stage now has a Manage button" />
+
+## Step 7: Share the Roadmap Poster
+
+Turn your roadmap into a shareable image:
+
+1. From the Roadmap tab, open the poster creator
+2. Choose from 4 poster templates: **Neon**, **Nebula**, **Inferno**, or **Phantom**
+3. Preview how your roadmap looks
+4. Download the high-resolution PNG
+
+Share the poster in your WhatsApp and Discord groups so players can see the full tournament journey before registering.
+
+<Screenshot src={ss_roadmap_poster_templates} alt="Roadmap poster templates" caption="Choose from 4 poster templates — Neon, Nebula, Inferno, Phantom" />
+
+> **Tip:** Post the roadmap poster alongside your tournament announcement. Players are more likely to register when they can see the full journey — qualifiers through finals.
+
+## Common Roadmap Structures
+
+### Small Tournament (24-48 teams)
+- **Stage 1:** Qualifiers — 2-4 groups, Elimination, top 6 advance
+- **Stage 2:** Finals — 1 group, Round Robin, winner takes all
+
+### Medium Tournament (96-192 teams)
+- **Stage 1:** Open Qualifiers — 8-16 groups, Elimination, top 4 advance
+- **Stage 2:** Semifinals — 4-8 groups, Elimination, top 3 advance
+- **Stage 3:** Grand Finals — Round Robin with 6 invited pro teams
+
+### Large Tournament (200+ teams)
+- **Stage 1:** Open Qualifiers — 16+ groups, Elimination, top 4 advance
+- **Stage 2:** Closed Qualifiers — 8 groups, Elimination, top 3 advance
+- **Stage 3:** Semifinals — 4 groups, Elimination, top 3 advance
+- **Stage 4:** Grand Finals — Round Robin with invited slots
+
+## Related
+
+- [Creating a Tournament](/organizer/tournaments/creating-a-tournament)
+- [Group Creation](/how-to/group-creation)
+- [Invited Slots](/organizer/tournaments/invited-slots)
+- [Scrims vs Tournaments](/getting-started/scrims-vs-tournaments)

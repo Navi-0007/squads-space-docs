@@ -1,0 +1,120 @@
+---
+title: "How to Set Up Registration and Requirements"
+description: "Choose the right registration mode and requirements for your tournament."
+---
+
+import Screenshot from '/snippets/screenshot.mdx'
+import { ss_registration_modes_comparison, ss_registrations_page, ss_registrations_detail_panel, ss_registrations_bulk_actions } from '/snippets/screenshots.mdx'
+
+This guide helps you pick the right registration setup for your event and shows you how to manage registrations effectively.
+
+## Choosing Your Registration Mode
+
+### Decision Tree
+
+Ask yourself these questions:
+
+**1. Should anyone be able to find your tournament?**
+- **Yes** → Public (Open or Approval Required)
+- **No** → Private (Invite Only or Invite with Approval)
+
+**2. Do you want to vet teams before confirming?**
+- **Yes** → Approval Required or Invite with Approval
+- **No** → Open or Invite Only
+
+| Your situation | Best mode |
+|----------------|-----------|
+| Weekly community scrim, everyone welcome | **Open** |
+| Competitive tournament, want to check teams | **Approval Required** |
+| Private practice with specific teams | **Invite Only** |
+| Paid event — collect payment, then approve | **Invite with Approval** |
+
+<Screenshot src={ss_registration_modes_comparison} alt="Registration modes comparison" caption="The four registration modes and when to use each" />
+
+## Setting Up Requirements
+
+During tournament creation (Step 1: Tournament Details), toggle the requirements you want:
+
+### Requirement Combinations
+
+| Goal | Toggle these | What players experience |
+|------|-------------|----------------------|
+| Build your club community | **Require Club Membership** | Registrant prompted to join your club |
+| Ensure complete teams | **Require Full Roster** | Team must fill all slots before registration is complete |
+| Full club community + complete teams | **Require All Members in Club** | All members join club + fill roster (auto-enables first two) |
+| Track individual player performance | **Require Game UID & IGN** | Players provide Free Fire UID and IGN for this tournament |
+| Maximum accountability | All four toggled on | Full control — club membership, roster, and identity verification |
+
+> **Tip:** For casual scrims, skip all requirements — keep registration frictionless. For competitive events, enable UID/IGN at minimum so you can track per-player kills and use Smart Results.
+
+### UID/IGN Submission Modes
+
+When you enable "Require Game UID & IGN", how UIDs get submitted depends on whether you also enable "Require Full Roster":
+
+- **With Full Roster:** Each team member provides their own UID and IGN individually from the Registration Status page
+- **Without Full Roster:** The registrant submits UIDs and IGNs for all team members in one form
+
+Both modes work — choose based on whether you want individual accountability (full roster) or faster registration (registrant handles it).
+
+## Managing Registrations
+
+### The Registrations Dashboard
+
+<Screenshot src={ss_registrations_page} alt="Registrations page" caption="Filter, search, and manage all registrations from one page" />
+
+From the Tournament Dashboard **Registrations** tab, you can:
+
+1. **Filter by status** — All, Pending, Confirmed, Applied, Rejected
+2. **Search** by name, squad name, or ID
+3. **Click any registration** to open the detail panel
+
+### Reviewing a Registration
+
+<Screenshot src={ss_registrations_detail_panel} alt="Registration detail panel" caption="Team info, members, requirement progress, and actions" />
+
+The detail panel shows:
+- Team name and registrant
+- All members with their details
+- Requirement progress (which are complete, which need action)
+- Approve, Reject, or Delete buttons
+
+### Bulk Actions for Large Tournaments
+
+<Screenshot src={ss_registrations_bulk_actions} alt="Bulk actions" caption="Select multiple registrations and approve, reject, or delete in bulk" />
+
+For tournaments with 50+ registrations:
+
+1. Filter to **Pending** registrations
+2. Select all (or pick specific ones)
+3. Click **Bulk Approve**, **Bulk Reject**, or **Bulk Delete**
+
+> **Tip:** After your registration deadline, filter to Pending, review the list, then bulk approve all valid teams and bulk reject the rest. Much faster than one-by-one.
+
+## Common Setups
+
+### Casual Weekly Scrim
+- Mode: **Open**
+- Requirements: None
+- Result: Players register and are confirmed instantly. Minimal friction.
+
+### Community Tournament (50-100 teams)
+- Mode: **Approval Required**
+- Requirements: **Require Club Membership** + **Require Game UID & IGN**
+- Result: Teams apply, you vet them, they join your club. UID enables kill tracking.
+
+### Competitive Open (100+ teams)
+- Mode: **Approval Required**
+- Requirements: **Require All Members in Club** + **Require Game UID & IGN**
+- Result: Maximum accountability. All players are in your club, all have verified UIDs.
+
+### Paid Invitational
+- Mode: **Invite with Approval**
+- Requirements: **Require Game UID & IGN**
+- Result: Share invite link after payment. Approve after verifying payment. UIDs for kill tracking.
+
+## Related
+
+- [Registration Modes](/organizer/tournaments/registration-modes)
+- [Registration Requirements](/organizer/tournaments/requirements)
+- [Reviewing Registrations](/organizer/managing-players/reviewing-registrations)
+- [UID/IGN Verification](/organizer/tournaments/uid-ign-verification)

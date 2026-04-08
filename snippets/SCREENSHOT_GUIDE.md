@@ -2,231 +2,218 @@
 
 How to add screenshots to the SquadsSpace docs.
 
-## Quick steps
+## Team workflow
 
-1. Take the screenshot (see the table below for exactly what to capture)
-2. Upload to S3 at the correct folder (see S3 structure below)
-3. Open `snippets/screenshots.mdx`
-4. Set `S3_BASE` (one time) — your bucket URL ending with `/public-assets/public-docs`
-5. Add the filename to the matching variable
-6. Commit and push — every page using that variable automatically shows the new image
+1. Take the screenshot (see tables below for exactly what to capture)
+2. Name it **exactly** as listed in the Filename column
+3. Upload to S3 at `squad-space/public-assets/public-docs/[folder]/[filename]`
+4. Done — docs pick it up automatically. No code changes needed.
 
-## S3 Folder Structure
+## S3 bucket structure
 
 ```
-public-assets/public-docs/
-├── getting-started/          # Onboarding screenshots
-├── players/                  # Player dashboard, match hub, squads, clubs, etc.
+s3://squad-space/public-assets/public-docs/
+├── getting-started/
+├── players/
 └── organizer/
-    ├── dashboard/            # Organizer dashboard, tournament dashboard
-    ├── tournaments/          # Creation, editing, roadmap, registration, status control, export, point tables
-    ├── matches/              # Match management, mass ops, smart results, announcements, stage completion/settings/summary
-    ├── groups/               # Auto-groups, invited slots
-    ├── live-scoring/         # Live scoring setup, active session, standalone
-    ├── overlays/             # OBS overlay URLs, templates, broadcast config
-    ├── scrims/               # Scrim management page
-    └── clubs/                # Club settings, members, public page
+    ├── dashboard/
+    ├── tournaments/
+    ├── matches/
+    ├── groups/
+    ├── live-scoring/
+    ├── overlays/
+    ├── scrims/
+    └── clubs/
 ```
 
-## How it works
-
-`screenshots.mdx` has a base URL and a helper function. You only set the base URL once — then just add filenames.
-
-**Step 1: Set the base URL (one time)**
-```
-export const S3_BASE = "https://your-bucket.s3.ap-south-1.amazonaws.com/public-assets/public-docs"
-```
-
-**Step 2: Add filenames to variables**
-
-Before:
-```
-export const ss_player_dashboard = s3("players", "")
-```
-
-After:
-```
-export const ss_player_dashboard = s3("players", "dashboard-overview.png")
-```
-
-This builds the full URL: `https://your-bucket.s3.../public-assets/public-docs/players/dashboard-overview.png`
-
-**After:**
-```
-export const ss_player_dashboard = "https://your-s3-bucket.s3.amazonaws.com/docs/player-dashboard.png"
-```
-
-## What pages show while screenshots are missing
-
-Pages show a blue info box: **"Screenshot coming soon — [description]"**. Once you add the URL, the actual image replaces it automatically.
+Base URL: `https://squad-space.s3.ap-south-1.amazonaws.com/public-assets/public-docs`
 
 ---
 
-## Screenshot list
+## Getting Started
 
-### Getting Started
+**Upload to:** `public-assets/public-docs/getting-started/`
 
-| Variable | What to capture | Where in the app |
+| Filename | What to capture | Where in the app |
 |----------|----------------|-----------------|
-| `ss_getting_started_become_organizer_landing` | The "Become Organizer" landing page before applying | `/organizer/register` |
-| `ss_getting_started_become_organizer_dashboard` | Organizer Dashboard right after activation | `/organizer/[slug]` |
+| `become-organizer-landing.png` | The "Become Organizer" landing page | `/organizer/register` |
+| `organizer-dashboard-first-view.png` | Organizer Dashboard right after activation | `/organizer/[slug]` |
 
-### Player Pages
+## Players
 
-| Variable | What to capture | Where in the app |
+**Upload to:** `public-assets/public-docs/players/`
+
+| Filename | What to capture | Where in the app |
 |----------|----------------|-----------------|
-| `ss_player_dashboard` | Player Dashboard with tournaments, clubs, quick actions visible | `/dashboard` |
-| `ss_player_browsing_tournaments` | All Tournaments page with cards, filters, status badges | `/tournaments/p/all-tournaments` |
-| `ss_player_register_button` | Tournament page showing the Register/Join button in hero | Any tournament page |
-| `ss_player_registration_status` | Registration Status page with requirements progress tracker | `/tournaments/p/[slug]/status` |
-| `ss_player_match_hub` | Match Hub with schedule, room credentials, match selector | Match Hub for any active tournament |
-| `ss_player_squad_page` | Squad page showing members, invite code, name | `/squads` |
-| `ss_player_clubs_directory` | Clubs directory with club cards | `/clubs` |
-| `ss_player_profile` | Profile page with hero banner, tournaments, clubs | `/profile/[username]` |
-| `ss_player_notifications` | Notifications page with tabs (All, Unread, Saved) | `/notifications` |
+| `player-dashboard.png` | Player Dashboard — tournaments, clubs, quick actions | `/dashboard` |
+| `all-tournaments-page.png` | All Tournaments with cards, filters, status badges | `/tournaments/p/all-tournaments` |
+| `tournament-register-button.png` | Tournament page with Register/Join button in hero | Any tournament page |
+| `registration-status-page.png` | Registration Status with requirements progress tracker | `/tournaments/p/[slug]/status` |
+| `match-hub.png` | Match Hub — schedule, room credentials, match selector | Match Hub for any active tournament |
+| `squad-page.png` | Squad page with members, invite code | `/squads` |
+| `clubs-directory.png` | Clubs directory with club cards | `/clubs` |
+| `profile-page.png` | Profile page — hero banner, tournaments, clubs | `/profile/[username]` |
+| `notifications-page.png` | Notifications with tabs (All, Unread, Saved) | `/notifications` |
 
-### Organizer Dashboard
+## Organizer Dashboard
 
-| Variable | What to capture | Where in the app |
+**Upload to:** `public-assets/public-docs/organizer/dashboard/`
+
+| Filename | What to capture | Where in the app |
 |----------|----------------|-----------------|
-| `ss_organizer_dashboard` | Organizer Dashboard — club details, quick actions, tournaments list | `/organizer/[slug]` |
-| `ss_organizer_tournament_dashboard` | Tournament Dashboard with tabs (Overview, Roadmap, Registrations...) | `/organizer/[slug]/tournaments/[tSlug]` |
+| `organizer-dashboard.png` | Organizer Dashboard — club details, quick actions, tournaments | `/organizer/[slug]` |
+| `tournament-dashboard.png` | Tournament Dashboard with tabs (Overview, Roadmap, Registrations...) | `/organizer/[slug]/tournaments/[tSlug]` |
 
-### Tournament Creation
+## Tournament Creation & Editing
 
-| Variable | What to capture | Where in the app |
+**Upload to:** `public-assets/public-docs/organizer/tournaments/`
+
+| Filename | What to capture | Where in the app |
 |----------|----------------|-----------------|
-| `ss_create_tournament_wizard` | Full creation wizard — Step 1 visible | `/organizer/[slug]/tournaments/create` |
-| `ss_create_tournament_step1_details` | Step 1: Tournament Details with fields visible | Same page, Step 1 |
-| `ss_create_tournament_step2_game_config` | Step 2: Game Configuration — scoring, platforms | Same page, Step 2 |
-| `ss_create_tournament_step3_review` | Step 3: Review & Create summary | Same page, Step 3 |
+| `create-wizard-overview.png` | Creation wizard with Step 1 visible | `/organizer/[slug]/tournaments/create` |
+| `create-step1-details.png` | Step 1: Tournament Details — name, format, schedule, requirements | Same page, Step 1 |
+| `create-step2-game-config.png` | Step 2: Game Configuration — scoring, platforms | Same page, Step 2 |
+| `create-step3-review.png` | Step 3: Review & Create summary | Same page, Step 3 |
+| `edit-accordion-sections.png` | Edit page with expandable accordion sections | `/organizer/.../edit` |
+| `edit-locked-field-badge.png` | A locked field showing red/amber badge (hover for tooltip) | Same page, hover on locked field |
 
-### Tournament Editing
+## Roadmap Builder
 
-| Variable | What to capture | Where in the app |
+**Upload to:** `public-assets/public-docs/organizer/tournaments/`
+
+| Filename | What to capture | Where in the app |
 |----------|----------------|-----------------|
-| `ss_edit_tournament_accordion` | Edit page with accordion sections expanded | `/organizer/.../edit` |
-| `ss_edit_tournament_locked_field` | A locked field showing red/amber badge with tooltip | Same page, hover on locked field |
+| `roadmap-empty-configure.png` | Roadmap tab before configuration — "Configure" button | Tournament Dashboard → Roadmap tab |
+| `roadmap-stages-configured.png` | Complete roadmap with 2-3 stages | Roadmap Builder with stages filled |
+| `roadmap-stage-editor.png` | One stage being edited — entrants, group size, qualifiers | Stage editor in builder |
+| `roadmap-published.png` | Published roadmap with "Manage" buttons | Roadmap tab after publishing |
+| `roadmap-poster-templates.png` | Poster template gallery (Neon, Nebula, Inferno, Phantom) | Poster image creation page |
+| `roadmap-poster-preview.png` | Poster preview before download | Same page, preview mode |
 
-### Roadmap Builder
+## Registrations
 
-| Variable | What to capture | Where in the app |
+**Upload to:** `public-assets/public-docs/organizer/tournaments/`
+
+| Filename | What to capture | Where in the app |
 |----------|----------------|-----------------|
-| `ss_roadmap_builder_empty` | Roadmap tab before configuration — "Configure" button visible | Tournament Dashboard → Roadmap tab |
-| `ss_roadmap_builder_stages` | Complete roadmap with 2-3 stages configured | Roadmap Builder with stages |
-| `ss_roadmap_builder_stage_config` | One stage being configured — entrants, group size, qualifiers fields | Stage editor in builder |
-| `ss_roadmap_builder_published` | Published roadmap with "Manage" buttons on each stage | Roadmap tab after publishing |
-| `ss_roadmap_poster_templates` | Poster template gallery showing Neon, Nebula, Inferno, Phantom | Poster image creation page |
-| `ss_roadmap_poster_download` | Poster preview before download | Same page, preview mode |
+| `registrations-page.png` | Registrations tab with filters and cards | Tournament Dashboard → Registrations |
+| `registration-detail-panel.png` | Detail panel — team info, members, requirements | Click any registration |
+| `registrations-bulk-actions.png` | Multiple selected with bulk action buttons | Select 3+ registrations |
+| `registration-modes-selector.png` | Registration mode selection in creation wizard | Tournament creation Step 1 |
 
-### Registration & Requirements
+## Status Control & Export
 
-| Variable | What to capture | Where in the app |
+**Upload to:** `public-assets/public-docs/organizer/tournaments/`
+
+| Filename | What to capture | Where in the app |
 |----------|----------------|-----------------|
-| `ss_registrations_page` | Registrations tab with filters (All, Pending, Confirmed...) and cards | Tournament Dashboard → Registrations |
-| `ss_registrations_detail_panel` | Detail panel open for one registration — team info, members, requirements | Click any registration |
-| `ss_registrations_bulk_actions` | Multiple registrations selected with bulk action buttons visible | Select 3+ registrations |
-| `ss_registration_modes_comparison` | Registration mode selection in creation wizard (Open, Approval Required...) | Tournament creation Step 1 |
+| `status-control-transitions.png` | Status Control page — transition cards | Tournament Dashboard → Status |
+| `status-control-risk-level.png` | Transition card showing risk level badge | Same page, any transition card |
+| `export-modal.png` | Export modal — categories and format selection | Tournaments → Export |
+| `point-table-config.png` | Point table — kill points + placement grid | Tournament creation Step 2 |
 
-### Group Creation
+## Groups & Invited Slots
 
-| Variable | What to capture | Where in the app |
+**Upload to:** `public-assets/public-docs/organizer/groups/`
+
+| Filename | What to capture | Where in the app |
 |----------|----------------|-----------------|
-| `ss_auto_groups_config` | Auto-groups configuration page — naming, seeding, fill options | `/rounds/[round]/auto-groups` |
-| `ss_auto_groups_preview` | Group preview after clicking "Preview Groups" | Same page, after preview |
-| `ss_groups_page_locked` | Groups page with lock indicators (green dots) | `/rounds/[round]/groups` |
-| `ss_groups_multi_swap` | Multi Swap view with teams selected for moving | Same page, multi-select mode |
+| `auto-groups-config.png` | Auto-groups configuration — naming, seeding, fill | `/rounds/[round]/auto-groups` |
+| `auto-groups-preview.png` | Group preview after "Preview Groups" | Same page, after preview |
+| `groups-locked.png` | Groups page with lock indicators (green dots) | `/rounds/[round]/groups` |
+| `groups-multi-swap.png` | Multi Swap view with teams selected | Same page, multi-select mode |
+| `invited-slots-page.png` | Invited Slots — invite link, capacity, joined teams | `/rounds/[round]/invited-slots` |
+| `invited-slots-link-actions.png` | Invite link with Copy, Rotate, Revoke buttons | Same page, link card |
 
-### Invited Slots
+## Match Management & Mass Operations
 
-| Variable | What to capture | Where in the app |
+**Upload to:** `public-assets/public-docs/organizer/matches/`
+
+| Filename | What to capture | Where in the app |
 |----------|----------------|-----------------|
-| `ss_invited_slots_page` | Invited Slots page — invite link, capacity, joined teams | `/rounds/[round]/invited-slots` |
-| `ss_invited_slots_link_actions` | Invite link section with Copy, Rotate, Revoke buttons | Same page, link card |
+| `group-match-page.png` | Group page — match selector, schedule, results | Any group page |
+| `match-status-card.png` | Match status with action buttons (Start Match, etc.) | Group page, match selected |
+| `results-entry-table.png` | Results entry — placement and kills columns | Group page → Results |
+| `room-credentials-card.png` | Room ID & Password card (with lock icon if not started) | Group page → ID/Password |
+| `mass-create-scheduling.png` | Mass Create — scheduling options (Parallel, Global, Same Time) | Mass Ops → Create, Step 3 |
+| `mass-create-maps.png` | Mass Create — map selection | Mass Ops → Create, Step 4 |
+| `mass-manager.png` | Mass Manager — bulk edit schedules | Mass Ops → Mass Manager |
+| `mass-resultor.png` | Mass Resultor — score entry across groups | Mass Ops → Mass Resultor |
 
-### Match Management
+## Smart Results
 
-| Variable | What to capture | Where in the app |
+**Upload to:** `public-assets/public-docs/organizer/matches/`
+
+| Filename | What to capture | Where in the app |
 |----------|----------------|-----------------|
-| `ss_match_management_group` | Group page with match selector, schedule, results sections | Any group page |
-| `ss_match_status_card` | Match status card showing status + action buttons (Start Match, etc.) | Group page, match selected |
-| `ss_match_results_entry` | Results entry table with placement and kills columns | Group page → Results |
-| `ss_match_room_credentials` | Room ID & Password card (with lock icon if not started) | Group page → ID/Password |
+| `smart-results-upload.png` | Upload screen — file picker | Group page → Smart Results button |
+| `smart-results-review.png` | Review screen — extracted scores | After upload, review step |
+| `smart-results-confirm.png` | Confirm screen before saving | After review, confirm step |
 
-### Mass Operations
+## Stage Management
 
-| Variable | What to capture | Where in the app |
+**Upload to:** `public-assets/public-docs/organizer/matches/`
+
+| Filename | What to capture | Where in the app |
 |----------|----------------|-----------------|
-| `ss_mass_create_scheduling` | Mass Create — scheduling options (Parallel, Global, Same Time) | Mass Operations → Create Matches, Step 3 |
-| `ss_mass_create_maps` | Mass Create — map selection (Same for all, Custom per group) | Mass Operations → Create Matches, Step 4 |
-| `ss_mass_manager` | Mass Manager page with match details across groups | Mass Operations → Mass Manager |
-| `ss_mass_resultor` | Mass Resultor page with score entry | Mass Operations → Mass Resultor |
+| `complete-stage-status.png` | Complete Stage — group statuses | Stage → Complete Stage |
+| `complete-stage-qualifiers.png` | Qualifier preview — teams above/below line | Review Qualifiers step |
+| `complete-stage-winners.png` | Winners view for final stage | Review Winners step |
+| `announcement-create.png` | New Announcement form | Group → Announcements → New |
+| `announcement-player-view.png` | Announcements in player Match Hub | Player Match Hub |
+| `stage-settings.png` | Stage Settings — name, auto-assign, redistribute | Stage → Settings |
+| `stage-summary.png` | Stage Summary — overview with tabs | Stage → Summary |
 
-### Smart Results
+## Live Scoring
 
-| Variable | What to capture | Where in the app |
+**Upload to:** `public-assets/public-docs/organizer/live-scoring/`
+
+| Filename | What to capture | Where in the app |
 |----------|----------------|-----------------|
-| `ss_smart_results_upload` | Smart Results upload screen — file picker visible | Group page → Smart Results button |
-| `ss_smart_results_review` | Review screen showing extracted scores from screenshot | After upload, review step |
-| `ss_smart_results_confirm` | Confirm screen before saving results | After review, confirm step |
+| `live-scoring-setup.png` | Setup page — teams, broadcast config, Start button | Group → Live Scoring |
+| `live-scoring-active.png` | Active session — match tabs, score table, sidebar | During active session |
+| `live-scoring-push-scores.png` | Bottom bar with "Push Scores" and "End Session" | During session, bottom |
+| `live-scoring-end-session.png` | End Session confirmation modal | After clicking End Session |
+| `standalone-create.png` | Standalone session creation wizard | Sidebar → Live Scoring → Create |
 
-### Live Scoring
+## Stream Overlays
 
-| Variable | What to capture | Where in the app |
+**Upload to:** `public-assets/public-docs/organizer/overlays/`
+
+| Filename | What to capture | Where in the app |
 |----------|----------------|-----------------|
-| `ss_live_scoring_setup` | Live Scoring setup page — teams, broadcast config, Start button | Group page → Live Scoring |
-| `ss_live_scoring_active` | Active scoring interface — match tabs, score table, standings sidebar | During active session |
-| `ss_live_scoring_push_scores` | Bottom bar showing "Push Scores" and "End Session" buttons | During active session, bottom |
-| `ss_live_scoring_end_session` | End Session confirmation modal | After clicking End Session |
-| `ss_live_scoring_standalone_create` | Standalone session creation — basic info, teams, points config | Sidebar → Live Scoring → Create |
+| `overlay-urls-modal.png` | OBS Overlay URLs modal with copy buttons | After starting live session |
+| `overlay-side-in-obs.png` | Side overlay running in OBS (overlay + game feed) | OBS with browser source |
+| `overlay-wide-in-obs.png` | Wide 16:9 overlay running in OBS | OBS with browser source |
+| `overlay-template-gallery.png` | Template gallery showing designs | Broadcast config → template picker |
+| `overlay-broadcast-config.png` | Broadcast config fields (tournament, stage, handles) | Live Scoring setup |
 
-### Stream Overlays
+## Scrims
 
-| Variable | What to capture | Where in the app |
+**Upload to:** `public-assets/public-docs/organizer/scrims/`
+
+| Filename | What to capture | Where in the app |
 |----------|----------------|-----------------|
-| `ss_overlay_urls_modal` | OBS Overlay URLs modal with copy buttons | After starting live session |
-| `ss_overlay_side_in_obs` | Side overlay rendered in OBS (overlay + game feed) | OBS with browser source added |
-| `ss_overlay_wide_in_obs` | Wide 16:9 overlay rendered in OBS | OBS with browser source added |
-| `ss_overlay_template_gallery` | Template gallery showing available designs | Broadcast config → template picker |
-| `ss_overlay_broadcast_config` | Broadcast configuration fields (tournament, stage, handles) | Live Scoring setup page |
+| `scrim-management.png` | Scrim page — schedule, results, announcements | Any scrim page |
 
-### Stage Completion
+## Clubs
 
-| Variable | What to capture | Where in the app |
+**Upload to:** `public-assets/public-docs/organizer/clubs/`
+
+| Filename | What to capture | Where in the app |
 |----------|----------------|-----------------|
-| `ss_complete_stage_status` | Complete Stage page — group statuses (ready, incomplete, etc.) | Stage → Complete Stage |
-| `ss_complete_stage_qualifiers` | Qualifier preview — teams highlighted above/below qualifier line | Review Qualifiers step |
-| `ss_complete_stage_winners` | Winners view for final stage | Review Winners step (final stage) |
-
-### Status Control
-
-| Variable | What to capture | Where in the app |
-|----------|----------------|-----------------|
-| `ss_status_control_transitions` | Status Control page — transition cards with descriptions | Tournament Dashboard → Status |
-| `ss_status_control_risk_levels` | Transition card showing risk level badge (low/medium/high) | Same page, any transition card |
-
-### Scrim, Club, Other
-
-| Variable | What to capture | Where in the app |
-|----------|----------------|-----------------|
-| `ss_scrim_management_page` | Scrim page with schedule, results, announcements sections | Any scrim page |
-| `ss_club_settings` | Club Settings page — name, region, social links, banner | Organizer sidebar → Club Settings |
-| `ss_club_members` | Club Members page — member list | Organizer sidebar → Members |
-| `ss_club_public_page` | Public club page as a player sees it | `/clubs/[slug]` |
-| `ss_announcements_create` | New Announcement form — title, description, type selector | Group → Announcements → New |
-| `ss_announcements_player_view` | Announcements card in player Match Hub | Player Match Hub → Announcements |
-| `ss_export_modal` | Export modal — category selection and format | Tournaments → Export |
-| `ss_stage_settings` | Stage Settings page — name, auto-assign, redistribute | Stage → Settings |
-| `ss_stage_summary` | Stage Summary — overview with tabs | Stage → Summary |
-| `ss_point_table_config` | Point table configuration — kill points + placement grid | Tournament creation Step 2 |
+| `club-settings.png` | Club Settings — name, region, social links, banner | Organizer sidebar → Club Settings |
+| `club-members.png` | Club Members page | Organizer sidebar → Members |
+| `club-public-page.png` | Public club page as a player sees it | `/clubs/[slug]` |
 
 ---
 
 ## Tips for good screenshots
 
-1. **Use a populated account** — screenshots should show real-looking data (team names, scores, etc.)
-2. **Full width** — capture the full page width, not a cropped section
-3. **Light theme** — use the default theme for consistency
+1. **Use a populated account** — show real-looking data (team names, scores, etc.)
+2. **Full width** — capture the full page, not a cropped section
+3. **Default theme** — use the default dark theme for consistency
 4. **Hide personal info** — blur or use test accounts without real emails
-5. **PNG format** — upload as PNG for crisp text rendering
-6. **Recommended size** — 1200px wide minimum for readability on docs
+5. **PNG format** — use PNG for crisp text
+6. **1200px+ wide** — minimum width for readability in docs
+7. **Name exactly as listed** — filenames must match or the docs won't find them

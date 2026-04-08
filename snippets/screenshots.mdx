@@ -18,7 +18,7 @@
   Example: "https://squadsspace-public.s3.ap-south-1.amazonaws.com/public-assets/public-docs"
 */}
 
-export const S3_BASE = ""
+export const S3_BASE = "https://squad-space.s3.ap-south-1.amazonaws.com/public-assets/public-docs"
 
 export const s3 = (folder, file) => (S3_BASE && file) ? `${S3_BASE}/${folder}/${file}` : ""
 

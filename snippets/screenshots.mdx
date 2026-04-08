@@ -2,160 +2,204 @@
   SCREENSHOT REGISTRY
   ═══════════════════════════════════════════════════════
   Central file for all screenshot URLs used across docs.
-  
+
+  S3 STRUCTURE:
+  public-assets/public-docs/
+  ├── getting-started/
+  ├── players/
+  ├── organizer/
+  │   ├── dashboard/
+  │   ├── tournaments/
+  │   ├── matches/
+  │   ├── groups/
+  │   ├── live-scoring/
+  │   ├── overlays/
+  │   ├── scrims/
+  │   └── clubs/
+  └── how-to/
+
   HOW TO USE:
-  1. Upload screenshots to S3
-  2. Update the URL in the export below
-  3. Every page importing this variable automatically picks up the new image
-  
-  NAMING CONVENTION:
-  - Use snake_case: ss_[section]_[page]_[description]
-  - Example: ss_organizer_roadmap_builder_stages
-  
+  1. Take the screenshot (see SCREENSHOT_GUIDE.md for what to capture)
+  2. Upload to S3 at: public-assets/public-docs/[section]/[filename].png
+  3. Set the S3_BASE below to your bucket URL
+  4. Replace "" with the filename (e.g., "become-organizer-landing.png")
+  5. The full URL is built automatically: S3_BASE + folder + filename
+
   ADDING A NEW SCREENSHOT:
   1. Add a new export line below in the correct section
-  2. In the page MDX, import it: import { ss_my_new_shot } from '/snippets/screenshots.mdx'
-  3. Use it: <Frame caption="Description"><img src={ss_my_new_shot} alt="Description" /></Frame>
-  
-  PLACEHOLDER VALUE:
-  - Use "" (empty string) for screenshots not yet uploaded
-  - Pages should handle empty strings gracefully with alt text
+  2. Upload the file to the matching S3 folder
+  3. Set the filename in the export
+  4. In the page MDX, import it: import { ss_my_screenshot } from '/snippets/screenshots.mdx'
+  5. Use it: <Frame caption="Description"><img src={ss_my_screenshot} alt="Description" /></Frame>
   ═══════════════════════════════════════════════════════
 */}
 
-{/* ── Getting Started ──────────────────────────────────── */}
+{/*
+  ── S3 BASE URL ────────────────────────────────────────
+  Set this ONCE — all screenshot URLs are built from this.
+  Example: "https://your-bucket.s3.ap-south-1.amazonaws.com/public-assets/public-docs"
+*/}
 
-export const ss_getting_started_become_organizer_landing = ""
-export const ss_getting_started_become_organizer_dashboard = ""
+export const S3_BASE = ""
+
+{/* Helper: builds full URL, returns "" if base or file is empty */}
+export const s3 = (folder, file) => (S3_BASE && file) ? `${S3_BASE}/${folder}/${file}` : ""
+
+{/* ── Getting Started ──────────────────────────────────── */}
+{/* S3 path: public-assets/public-docs/getting-started/    */}
+
+export const ss_getting_started_become_organizer_landing  = s3("getting-started", "")
+export const ss_getting_started_become_organizer_dashboard = s3("getting-started", "")
 
 {/* ── Player Pages ─────────────────────────────────────── */}
+{/* S3 path: public-assets/public-docs/players/            */}
 
-export const ss_player_dashboard = ""
-export const ss_player_browsing_tournaments = ""
-export const ss_player_register_button = ""
-export const ss_player_registration_status = ""
-export const ss_player_match_hub = ""
-export const ss_player_squad_page = ""
-export const ss_player_clubs_directory = ""
-export const ss_player_profile = ""
-export const ss_player_notifications = ""
+export const ss_player_dashboard            = s3("players", "")
+export const ss_player_browsing_tournaments = s3("players", "")
+export const ss_player_register_button      = s3("players", "")
+export const ss_player_registration_status  = s3("players", "")
+export const ss_player_match_hub            = s3("players", "")
+export const ss_player_squad_page           = s3("players", "")
+export const ss_player_clubs_directory      = s3("players", "")
+export const ss_player_profile              = s3("players", "")
+export const ss_player_notifications        = s3("players", "")
 
 {/* ── Organizer Dashboard ──────────────────────────────── */}
+{/* S3 path: public-assets/public-docs/organizer/dashboard/ */}
 
-export const ss_organizer_dashboard = ""
-export const ss_organizer_tournament_dashboard = ""
+export const ss_organizer_dashboard            = s3("organizer/dashboard", "")
+export const ss_organizer_tournament_dashboard = s3("organizer/dashboard", "")
 
 {/* ── Tournament Creation ──────────────────────────────── */}
+{/* S3 path: public-assets/public-docs/organizer/tournaments/ */}
 
-export const ss_create_tournament_wizard = ""
-export const ss_create_tournament_step1_details = ""
-export const ss_create_tournament_step2_game_config = ""
-export const ss_create_tournament_step3_review = ""
+export const ss_create_tournament_wizard       = s3("organizer/tournaments", "")
+export const ss_create_tournament_step1_details = s3("organizer/tournaments", "")
+export const ss_create_tournament_step2_game_config = s3("organizer/tournaments", "")
+export const ss_create_tournament_step3_review = s3("organizer/tournaments", "")
 
 {/* ── Tournament Editing ───────────────────────────────── */}
+{/* S3 path: public-assets/public-docs/organizer/tournaments/ */}
 
-export const ss_edit_tournament_accordion = ""
-export const ss_edit_tournament_locked_field = ""
+export const ss_edit_tournament_accordion   = s3("organizer/tournaments", "")
+export const ss_edit_tournament_locked_field = s3("organizer/tournaments", "")
 
 {/* ── Roadmap Builder ──────────────────────────────────── */}
+{/* S3 path: public-assets/public-docs/organizer/tournaments/ */}
 
-export const ss_roadmap_builder_empty = ""
-export const ss_roadmap_builder_stages = ""
-export const ss_roadmap_builder_stage_config = ""
-export const ss_roadmap_builder_published = ""
-export const ss_roadmap_poster_templates = ""
-export const ss_roadmap_poster_download = ""
+export const ss_roadmap_builder_empty        = s3("organizer/tournaments", "")
+export const ss_roadmap_builder_stages       = s3("organizer/tournaments", "")
+export const ss_roadmap_builder_stage_config = s3("organizer/tournaments", "")
+export const ss_roadmap_builder_published    = s3("organizer/tournaments", "")
+export const ss_roadmap_poster_templates     = s3("organizer/tournaments", "")
+export const ss_roadmap_poster_download      = s3("organizer/tournaments", "")
 
 {/* ── Registration & Requirements ──────────────────────── */}
+{/* S3 path: public-assets/public-docs/organizer/tournaments/ */}
 
-export const ss_registrations_page = ""
-export const ss_registrations_detail_panel = ""
-export const ss_registrations_bulk_actions = ""
-export const ss_registration_modes_comparison = ""
+export const ss_registrations_page            = s3("organizer/tournaments", "")
+export const ss_registrations_detail_panel    = s3("organizer/tournaments", "")
+export const ss_registrations_bulk_actions    = s3("organizer/tournaments", "")
+export const ss_registration_modes_comparison = s3("organizer/tournaments", "")
 
 {/* ── Group Creation ───────────────────────────────────── */}
+{/* S3 path: public-assets/public-docs/organizer/groups/    */}
 
-export const ss_auto_groups_config = ""
-export const ss_auto_groups_preview = ""
-export const ss_groups_page_locked = ""
-export const ss_groups_multi_swap = ""
+export const ss_auto_groups_config  = s3("organizer/groups", "")
+export const ss_auto_groups_preview = s3("organizer/groups", "")
+export const ss_groups_page_locked  = s3("organizer/groups", "")
+export const ss_groups_multi_swap   = s3("organizer/groups", "")
 
 {/* ── Invited Slots ────────────────────────────────────── */}
+{/* S3 path: public-assets/public-docs/organizer/groups/    */}
 
-export const ss_invited_slots_page = ""
-export const ss_invited_slots_link_actions = ""
+export const ss_invited_slots_page         = s3("organizer/groups", "")
+export const ss_invited_slots_link_actions = s3("organizer/groups", "")
 
 {/* ── Match Management ─────────────────────────────────── */}
+{/* S3 path: public-assets/public-docs/organizer/matches/   */}
 
-export const ss_match_management_group = ""
-export const ss_match_status_card = ""
-export const ss_match_results_entry = ""
-export const ss_match_room_credentials = ""
+export const ss_match_management_group = s3("organizer/matches", "")
+export const ss_match_status_card      = s3("organizer/matches", "")
+export const ss_match_results_entry    = s3("organizer/matches", "")
+export const ss_match_room_credentials = s3("organizer/matches", "")
 
 {/* ── Mass Operations ──────────────────────────────────── */}
+{/* S3 path: public-assets/public-docs/organizer/matches/   */}
 
-export const ss_mass_create_scheduling = ""
-export const ss_mass_create_maps = ""
-export const ss_mass_manager = ""
-export const ss_mass_resultor = ""
+export const ss_mass_create_scheduling = s3("organizer/matches", "")
+export const ss_mass_create_maps       = s3("organizer/matches", "")
+export const ss_mass_manager           = s3("organizer/matches", "")
+export const ss_mass_resultor          = s3("organizer/matches", "")
 
 {/* ── Smart Results ────────────────────────────────────── */}
+{/* S3 path: public-assets/public-docs/organizer/matches/   */}
 
-export const ss_smart_results_upload = ""
-export const ss_smart_results_review = ""
-export const ss_smart_results_confirm = ""
+export const ss_smart_results_upload  = s3("organizer/matches", "")
+export const ss_smart_results_review  = s3("organizer/matches", "")
+export const ss_smart_results_confirm = s3("organizer/matches", "")
 
 {/* ── Live Scoring ─────────────────────────────────────── */}
+{/* S3 path: public-assets/public-docs/organizer/live-scoring/ */}
 
-export const ss_live_scoring_setup = ""
-export const ss_live_scoring_active = ""
-export const ss_live_scoring_push_scores = ""
-export const ss_live_scoring_end_session = ""
-export const ss_live_scoring_standalone_create = ""
+export const ss_live_scoring_setup             = s3("organizer/live-scoring", "")
+export const ss_live_scoring_active            = s3("organizer/live-scoring", "")
+export const ss_live_scoring_push_scores       = s3("organizer/live-scoring", "")
+export const ss_live_scoring_end_session       = s3("organizer/live-scoring", "")
+export const ss_live_scoring_standalone_create = s3("organizer/live-scoring", "")
 
 {/* ── Stream Overlays ──────────────────────────────────── */}
+{/* S3 path: public-assets/public-docs/organizer/overlays/  */}
 
-export const ss_overlay_urls_modal = ""
-export const ss_overlay_side_in_obs = ""
-export const ss_overlay_wide_in_obs = ""
-export const ss_overlay_template_gallery = ""
-export const ss_overlay_broadcast_config = ""
+export const ss_overlay_urls_modal       = s3("organizer/overlays", "")
+export const ss_overlay_side_in_obs      = s3("organizer/overlays", "")
+export const ss_overlay_wide_in_obs      = s3("organizer/overlays", "")
+export const ss_overlay_template_gallery = s3("organizer/overlays", "")
+export const ss_overlay_broadcast_config = s3("organizer/overlays", "")
 
 {/* ── Stage Completion ─────────────────────────────────── */}
+{/* S3 path: public-assets/public-docs/organizer/matches/   */}
 
-export const ss_complete_stage_status = ""
-export const ss_complete_stage_qualifiers = ""
-export const ss_complete_stage_winners = ""
+export const ss_complete_stage_status     = s3("organizer/matches", "")
+export const ss_complete_stage_qualifiers = s3("organizer/matches", "")
+export const ss_complete_stage_winners    = s3("organizer/matches", "")
 
 {/* ── Status Control ───────────────────────────────────── */}
+{/* S3 path: public-assets/public-docs/organizer/tournaments/ */}
 
-export const ss_status_control_transitions = ""
-export const ss_status_control_risk_levels = ""
+export const ss_status_control_transitions = s3("organizer/tournaments", "")
+export const ss_status_control_risk_levels = s3("organizer/tournaments", "")
 
 {/* ── Scrim ────────────────────────────────────────────── */}
+{/* S3 path: public-assets/public-docs/organizer/scrims/    */}
 
-export const ss_scrim_management_page = ""
+export const ss_scrim_management_page = s3("organizer/scrims", "")
 
 {/* ── Club ─────────────────────────────────────────────── */}
+{/* S3 path: public-assets/public-docs/organizer/clubs/     */}
 
-export const ss_club_settings = ""
-export const ss_club_members = ""
-export const ss_club_public_page = ""
+export const ss_club_settings    = s3("organizer/clubs", "")
+export const ss_club_members     = s3("organizer/clubs", "")
+export const ss_club_public_page = s3("organizer/clubs", "")
 
 {/* ── Announcements ────────────────────────────────────── */}
+{/* S3 path: public-assets/public-docs/organizer/matches/   */}
 
-export const ss_announcements_create = ""
-export const ss_announcements_player_view = ""
+export const ss_announcements_create      = s3("organizer/matches", "")
+export const ss_announcements_player_view = s3("organizer/matches", "")
 
 {/* ── Export ───────────────────────────────────────────── */}
+{/* S3 path: public-assets/public-docs/organizer/tournaments/ */}
 
-export const ss_export_modal = ""
+export const ss_export_modal = s3("organizer/tournaments", "")
 
 {/* ── Stage Settings ───────────────────────────────────── */}
+{/* S3 path: public-assets/public-docs/organizer/matches/   */}
 
-export const ss_stage_settings = ""
-export const ss_stage_summary = ""
+export const ss_stage_settings = s3("organizer/matches", "")
+export const ss_stage_summary  = s3("organizer/matches", "")
 
 {/* ── Point Tables ─────────────────────────────────────── */}
+{/* S3 path: public-assets/public-docs/organizer/tournaments/ */}
 
-export const ss_point_table_config = ""
+export const ss_point_table_config = s3("organizer/tournaments", "")

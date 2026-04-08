@@ -5,18 +5,51 @@ How to add screenshots to the SquadsSpace docs.
 ## Quick steps
 
 1. Take the screenshot (see the table below for exactly what to capture)
-2. Upload it to S3 (or any public URL)
-3. Open `snippets/screenshots.mdx` and paste the URL next to the matching variable
-4. Commit and push — every page using that variable automatically shows the new image
+2. Upload to S3 at the correct folder (see S3 structure below)
+3. Open `snippets/screenshots.mdx`
+4. Set `S3_BASE` (one time) — your bucket URL ending with `/public-assets/public-docs`
+5. Add the filename to the matching variable
+6. Commit and push — every page using that variable automatically shows the new image
 
-## Where to find `screenshots.mdx`
+## S3 Folder Structure
 
-`snippets/screenshots.mdx` in this repo. Each variable is an empty string `""` until you add a URL.
-
-**Before:**
 ```
-export const ss_player_dashboard = ""
+public-assets/public-docs/
+├── getting-started/          # Onboarding screenshots
+├── players/                  # Player dashboard, match hub, squads, clubs, etc.
+└── organizer/
+    ├── dashboard/            # Organizer dashboard, tournament dashboard
+    ├── tournaments/          # Creation, editing, roadmap, registration, status control, export, point tables
+    ├── matches/              # Match management, mass ops, smart results, announcements, stage completion/settings/summary
+    ├── groups/               # Auto-groups, invited slots
+    ├── live-scoring/         # Live scoring setup, active session, standalone
+    ├── overlays/             # OBS overlay URLs, templates, broadcast config
+    ├── scrims/               # Scrim management page
+    └── clubs/                # Club settings, members, public page
 ```
+
+## How it works
+
+`screenshots.mdx` has a base URL and a helper function. You only set the base URL once — then just add filenames.
+
+**Step 1: Set the base URL (one time)**
+```
+export const S3_BASE = "https://your-bucket.s3.ap-south-1.amazonaws.com/public-assets/public-docs"
+```
+
+**Step 2: Add filenames to variables**
+
+Before:
+```
+export const ss_player_dashboard = s3("players", "")
+```
+
+After:
+```
+export const ss_player_dashboard = s3("players", "dashboard-overview.png")
+```
+
+This builds the full URL: `https://your-bucket.s3.../public-assets/public-docs/players/dashboard-overview.png`
 
 **After:**
 ```

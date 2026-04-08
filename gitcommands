@@ -48,7 +48,7 @@ DOCS_SRC="${SCRIPT_DIR}"
 DEST_BRANCH="${DEST_BRANCH:-staging}"
 # Uses x-access-token format for fine-grained PATs (github_pat_...)
 # Set REPO_URL env var to override, or update the token below
-NAVI_TOKEN="${NAVI_TOKEN:-$(grep 'x-access-token' ~/.git-credentials 2>/dev/null | head -1 | sed 's|https://x-access-token:||;s|@github.com||')}"
+NAVI_TOKEN="${NAVI_TOKEN:-$(grep -o 'github_pat_[a-zA-Z0-9_]*' ~/.git-credentials 2>/dev/null | tail -1)}"
 if [[ -n "${NAVI_TOKEN}" ]]; then
   REPO_URL="${REPO_URL:-https://x-access-token:${NAVI_TOKEN}@github.com/Navi-0007/squads-space-docs.git}"
 else
